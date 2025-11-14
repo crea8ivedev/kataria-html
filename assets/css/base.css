@@ -1,4 +1,4 @@
-*,
+/* *,
 ::before,
 ::after {
   @apply box-border ;
@@ -116,4 +116,4 @@ h6, .h6 {
 
 .content.black p {
   @apply text-black;
-}
+} */
