@@ -1,0 +1,38 @@
+{
+  "name": "html-kataria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/css/app.css -o ./dist/style.css --watch",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "swiper": "^12.0.3",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@html-eslint/eslint-plugin": "^0.48.0",
+    "@html-eslint/parser": "^0.48.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,html}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,html,css}": [
+      "prettier --write"
+    ]
+  }
+}

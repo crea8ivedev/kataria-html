@@ -1,0 +1,530 @@
+/* Header Start */
+.header .announcement-bar .swiper-slide p {
+    @apply text-white max-1023:text-body-4 max-1023:leading-14
+}
+
+
+@keyframes smoothScroll {
+    0% {
+      transform: translateY(-100px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+  }
+  }
+  
+  
+  header.header {
+    @apply absolute top-0 left-0 w-full z-999 ;
+  }
+   header.is-sticky{
+    animation: smoothScroll 1s forwards;
+    z-index: 1030;
+    @apply !fixed top-0 shadow-header;
+  }
+
+  header.header-white {
+    @apply relative;
+  }
+  header.header-white .header-bottom{
+    @apply shadow-none;
+  }
+  .header .header-bottom {
+    @apply min-1199:shadow-header ; 
+  }
+  header.is-sticky .header-bottom {
+    @apply mb-0 
+  }
+  
+  .announcement.up {
+    @apply hidden
+  }
+
+
+  .btn-search{
+    @apply relative
+  }
+  
+  .search-bar.active {
+    @apply w-full opacity-100;
+  }
+  .search-bar {
+    @apply absolute right-0 shadow-header overflow-hidden opacity-0 duration-300 delay-150 transition-all  top-[100%] w-0 bg-white ;
+  }
+  
+  .search-bar.active {
+    @apply block;
+  }
+  
+   .search-bar form , .search-bar-mobile form {
+    @apply relative bg-[url('../assets/images/search-icon.svg')] bg-no-repeat bg-[0px] bg-[length:20px] px-20  ;
+  }
+  
+  .search-bar input,
+  .search-input-bar input , .search-bar-mobile input {
+    @apply focus:!outline-none focus:!outline-0 py-10  appearance-none  w-full placeholder:text-white  placeholder:text-body-2 pl-10 leading-18  placeholder:font-body font-body text-body-2  placeholder:opacity-55;
+  }
+  
+  .header .navbar .menu > li > a {
+    @apply text-black uppercase text-body-2 min-1199:leading-108 leading-18 font-bold hover:text-red1 transition-colors duration-300 ease-in-out max-1199:order-1 max-1199:py-20;
+  }
+  .header .navbar .menu li .sub-menu li a {
+    @apply font-bold hover:text-red1 ;
+  }
+
+  .header .navbar .menu > li.mega-menu{
+    @apply cursor-pointer
+  }
+  
+  .header .menu-main-menu{
+    @apply max-1199:w-full
+  }
+  
+  .navbar{
+    @apply max-1199:hidden max-1199:w-full 
+  }
+  .navbar.active {
+    @apply max-1199:block ;
+  }
+  
+  .menu-open .navbar-toggler svg path {
+    @apply fill-red1;
+  }
+  .search-open .btn-search svg path {
+    @apply fill-red1
+  }
+  
+  /* Mega Menu Start */
+  .header .navbar .mega-menu {
+    @apply static max-1199:relative max-1199:flex max-1199:justify-between max-1199:flex-wrap max-1199:items-center;
+  }
+  
+  .header .navbar .mega-menu .sub-menu .menu-block > ul > li > a span {
+    @apply text-body-1 text-font hover:text-red1 transition-colors duration-300 ease-in-out;
+  }
+  
+  .header .navbar .mega-menu .sub-menu .menu-block-link  ul > li > a{
+    @apply text-body-1 text-font hover:text-red1 ;
+  }
+  .header .navbar .submenu-button {
+    @apply hidden max-1199:block max-1199:order-2 max-1199:mr-20 max-1199:w-15 max-1199:h-15 cursor-pointer;
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li {
+    @apply flex justify-between w-full items-center cursor-pointer max-1199:relative border-0 border-b-1 border-solid border-b-white  py-20 ;
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li .innermenu-button img{
+    @apply h-full w-full object-cover
+  }
+  
+  @media (min-width: 1200px) {
+    .header .navbar .mega-menu .sub-menu {
+      @apply absolute overflow-y-hidden w-full left-0 transition-all duration-300 delay-100 ease-in top-full opacity-0 invisible -z-9999 hidden; 
+    }
+    .header .navbar .mega-menu.active .sub-menu {
+      @apply block opacity-100 visible z-1;
+    }
+    .header .navbar .mega-menu .sub-menu .tabs {
+      @apply px-55 py-35 max-1441:px-35
+    }
+    .header .navbar .mega-menu .sub-menu .menu-block-link ul li a {
+      @apply text-font text-20 hover:text-red1;
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li a {
+      @apply text-grey font-bold text-heading-4 leading-29 max-1441:text-body-1  uppercase inline-block w-fit ;
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li.active a {
+      @apply text-red1 ;
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li.active img {
+      filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(4505%) hue-rotate(344deg) brightness(114%) contrast(102%);
+    }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul {
+    @apply flex flex-col ;
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item ul {
+    @apply flex flex-col gap-y-20;
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item ul li a {
+    @apply text-white font-bold text-body-2 leading-18 hover:text-red1;
+  }
+ 
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner .title {
+    @apply pb-15 border-0 border-b-2 border-b-grey mb-28
+  }
+
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner ul {
+    @apply max-1440:gap-12
+  }
+
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner .img {
+    @apply relative pt-[154.29%] rounded-[4px]
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner .img img {
+    @apply absolute top-0 left-0 h-full w-full object-cover rounded-[4px]
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item {
+    @apply opacity-0 invisible h-0 relative bg-no-repeat bg-center bg-cover;
+    background-image: url('../assets/images/bg-header.webp')
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner{
+    @apply relative z-2
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item::before{
+    @apply content-[''] absolute top-0 left-0 h-full w-full ;
+    background: linear-gradient(180deg, #444444 0%, rgba(68, 68, 68, 0) 100%)
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item.active {
+    @apply opacity-100 visible h-full;
+  }
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1441px) and (orientation: landscape) {
+    .header .announcement .btn-orange {
+      @apply px-20 text-body-3
+    }
+    .header .navbar .menu > li > a{
+      @apply text-[15px] leading-[85px]
+    }
+    .herobanner--main{
+      @apply h-[800px]
+    }
+    h1, .h1 {
+      @apply text-[55px] leading-[60px]
+    }
+    .sub-title span{
+      @apply text-[28px]
+    }
+    .btn-link a{
+      @apply text-[15px]
+    }
+    .btn-link svg {
+      @apply max-w-[16px]
+    }
+    .header .btn-red {
+      @apply text-[15px]
+    }
+    .header .logo img{
+      @apply max-w-200
+    }
+
+  }
+  
+  @media (max-width: 1199px) {
+    .header .navbar .mega-menu .sub-menu {
+      @apply hidden order-3 w-full
+    }
+    .header .navbar .sub-menu.open {
+      @apply !flex;
+    }
+    .header .navbar .sub-menu.open {
+      @apply bg-[#F0F0EE];
+    }
+    .header .logo img{
+      @apply max-w-198
+    }
+    .navbar{
+      @apply bg-white mt-10  h-413 overflow-y-auto 
+    }
+    .header .menu-main-menu ul {
+      @apply bg-offwhite
+    }
+
+    .header .menu-main-menu ul > li > a {
+      @apply p-20 block w-fit
+    }
+  
+    .header .navbar .mega-menu.active > a {
+      @apply text-red1
+    }
+  
+    .header .submenu-button.submenu-opened{
+      @apply rotate-180
+    }
+  
+    .header .submenu-button.submenu-opened svg path {
+      @apply fill-red1 ;
+    }
+  
+    .header .sub-menu > li {
+      @apply w-full
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs  ul {
+      @apply flex flex-col bg-white
+    }
+
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li .innermenu-button img{
+      @apply hidden
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li .submenu-button {
+      @apply mr-0;
+    }
+    
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li {
+      @apply text-font font-bold  py-20 px-20 w-full flex justify-between items-center;
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li  > a {
+      @apply p-0 text-grey uppercase hover:text-red1
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li.active > a {
+      @apply text-red1 
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs .item ul li {
+      @apply p-0
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li.active .submenu-button svg path{
+     @apply fill-red1
+    }
+    
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li.active .submenu-button {
+      @apply rotate-180
+    }
+
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner .title{
+      @apply hidden
+    }
+
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner{
+      @apply bg-font p-0
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner ul li  {
+      @apply px-55 py-20 bg-font text-white
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner ul li a {
+      @apply text-white capitalize hover:text-red1
+    }
+    .menu-open .search-open .navbar {
+      @apply hidden
+    }
+    .menu-open .search-open .navbar-toggler svg path {
+      @apply fill-black 
+    }
+
+    
+  }
+  
+  
+  @media (min-width: 1200px) and (orientation: landscape) and (max-height: 850px) {
+    .header .announcement {
+      @apply py-10
+    }
+    .header .announcement .btn-orange {
+      @apply px-18 py-8 text-body-3
+    }
+    .header .logo img{
+      @apply max-w-200
+    }
+    .header .navbar .menu > li > a{
+      @apply text-[15px]
+    }
+    .btn-link a{
+      @apply text-[15px]
+    }
+    .btn-link svg {
+      @apply max-w-[16px]
+    }
+
+    .header .sub-menu .menu-block , .header .sub-menu .menu-block-link {
+      @apply !p-20
+    }
+     .header .sub-menu .menu-block .menu-block-link .img img {
+      @apply h-150 w-150 max-w-full
+    } 
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li{
+      @apply py-15
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .tabs ul li a{
+      @apply  text-body-2
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item ul li a{
+      @apply text-body-2
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item ul{
+      @apply gap-y-10
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .img img {
+      @apply h-150 w-150
+    }
+    .header .navbar .mega-menu .sub-menu .menu-block > ul > li > a span {
+      @apply text-body-2
+    }
+    .header .navbar .mega-menu .sub-menu .menu-block > ul > li > a img {
+      @apply max-w-30
+    }
+  
+    .header .sub-menu .menu-block .menu-content-block h5 {
+      @apply text-[18px]
+    }
+    .header .navbar .mega-menu .sub-menu .menu-block h5 {
+      @apply text-[18px] leading-28
+    }
+  
+    .header .sub-menu .menu-block .img img {
+      @apply h-150 w-150
+    }
+  
+    .header .sub-menu .menu-block .menu-block-content span {
+      @apply text-body-2
+    }
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .max-w-346 .text-center {
+      @apply px-0
+    }
+  
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item span {
+      @apply text-body-2
+    }
+
+    .header .navbar .mega-menu .sub-menu .tabs{
+      @apply p-35
+    }
+
+    .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner{
+    @apply p-35
+  }
+  .header .navbar .mega-menu .sub-menu .tabbed-content .item .inner  .flex {
+    @apply gap-55
+  }
+
+  }
+
+  /* footer-start */
+  :is(h1,h2,h3,h4,h5,h6) span {
+    @apply text-red1
+  }
+  
+  .footer-dropdown ul li a {
+    @apply text-red1 hover:text-white font-bold ;
+  }
+  .footer-dropdown ul li.menu-item.current-menu-item {
+    @apply text-white
+  }
+  .footer-dropdown ul {
+    @apply columns-2 gap-55 max-768:columns-1 max-768:mt-20
+  }
+  .footer-dropdown ul li{
+    @apply pb-15 max-768:last:pb-0
+  }
+  .footer-menu .title.active .dropdown-icon {
+    @apply rotate-180
+  }
+
+  .footer-top {
+   @apply relative bg-no-repeat bg-center bg-cover z-1;
+    background-image: url('../assets/images/footer-pattern .webp')
+  }
+  @media (max-width:1023px) {
+    .footer-top {
+       background-image: url('../assets/images/mobile-footer-pattern.webp')
+     }
+  }
+
+  .footer-top::before{
+    @apply content-[''] absolute top-0 left-0 h-full w-full -z-1;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 69.23%) ;
+  }
+  .footer-bottom .menu ul {
+    @apply flex flex-wrap max-767:flex-col  justify-center items-center gap-20
+  }
+  .footer-bottom .menu ul li a {
+    @apply text-white font-bold hover:text-black
+  }
+  .footer-bottom .copy-right p {
+    @apply text-white font-bold
+  }
+  .footer-bottom .copy-right p a {
+    @apply hover:text-black
+  }
+  .footer-bottom .social-list li a {
+    @apply bg-white h-34 w-34 flex justify-center items-center rounded-full p-8 hover:bg-black
+  }
+  .footer-bottom .social-list li a img {
+    @apply  object-cover max-w-23 min-h-16
+  }
+  .footer-menu .title{
+    @apply justify-between items-center
+  }
+  .footer-menu .dropdown-icon img {
+    @apply h-15 w-15 
+  }
+  .footer-menu .title h4 {
+    @apply max-767:text-body-1 max-767:leading-24
+  }
+
+  /* techyscouts logo start */
+
+#techyscouts-logo {
+  @apply inline-block w-auto h-[26px] max-767:h-20; 
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.techyscouts-credit-link:hover #techyscouts-logo-heart,
+  .techyscouts-credit-link:focus #techyscouts-logo-heart {
+  animation: ts-heart-beat 2s infinite ease-in-out 0.6s;
+}
+
+.techyscouts-credit-link:hover #techyscouts-logo-text,
+  .techyscouts-credit-link:focus #techyscouts-logo-text {
+  animation: ts-draw-logo 2s forwards;
+}
+
+.techyscouts-credit-link:hover #techyscouts-logo-line-1,
+  .techyscouts-credit-link:hover #techyscouts-logo-line-2,
+  .techyscouts-credit-link:focus #techyscouts-logo-line-1,
+  .techyscouts-credit-link:focus #techyscouts-logo-line-2 {
+  animation: ts-swoop-down 0.5s forwards ease-out;
+}
+
+.techyscouts-credit-link:hover #techyscouts-logo-line-2,
+  .techyscouts-credit-link:focus #techyscouts-logo-line-2 {
+  animation-name: ts-swoop-up;
+}
+
+@keyframes ts-heart-beat {
+  5% {
+    transform: scale(1.1);
+    fill: #fff;
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  15% {
+    transform: scale(1.2);
+    fill: #fff;
+  }
+
+  40% {
+    transform: scale(1);
+    stroke-width: 0;
+  }
+}
+
+@keyframes ts-draw-logo {
+  0% {
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ts-swoop-down {
+  0% {
+    transform: translateY(-100%) rotate(10deg);
+  }
+}
+
+@keyframes ts-swoop-up {
+  0% {
+    transform: translateY(100%) rotate(-10deg);
+  }
+}

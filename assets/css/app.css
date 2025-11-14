@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "./base.css";
+@import "./components.css";
+@import "./utilities.css";
+@import "./layout.css";
+@import "swiper/swiper-bundle.css";
+@layer base, components, utilities;
+/* @import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';  */
+
+@theme {
+  /* color */
+  --color-red1: #FF3333;
+  --color-blue1: #003176;
+  --color-offwhite: #E0E0E0;
+  --color-font: #444444;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #999999;
+
+  /* fonts */
+  --font-body:"Onest", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-inherit: inherit;
+
+  /* font-weight */
+  --font-weight-inherit: inherit;
+
+  /* font-size */
+  --text-body-1: 20px;
+  --text-body-2: 16px;
+  --text-body-3: 14px;
+  --text-body-4: 12px;
+
+  --text-heading-1: 64px;
+  --text-heading-1-big: 80px;
+  --text-heading-2: 48px;
+  --text-heading-3: 32px;
+  --text-heading-4: 24px;
+  --text-heading-5: 16px;
+  --text-heading-6: 12px;
+
+  --text-heading-1-tablet: 40px;
+  --text-heading-2-tablet: 35px;
+  --text-heading-3-tablet: 32px;
+
+  --text-heading-1-mobile: 32px;
+  --text-heading-2-mobile: 32px;
+  --text-heading-3-mobile: 24px;
+  --text-heading-4-mobile: 20px;
+
+  --text-12: 12px;
+  --text-14: 14px;
+  --text-15: 15px;
+  --text-16: 16px;
+  --text-18: 18px;
+  --text-20: 20px;
+  --text-22: 22px;
+  --text-24: 24px;
+  --text-26: 26px;
+  --text-28: 28px;
+  --text-30: 30px;
+  --text-32: 32px;
+  --text-34: 34px;
+  --text-36: 36px;
+  --text-38: 38px;
+  --text-40: 40px;
+  --text-42: 42px;
+  --text-44: 44px;
+  --text-45: 45px;
+  --text-46: 56px;
+  --text-48: 48px;
+  --text-50: 50px;
+  --text-52: 52px;
+  --text-54: 54px;
+  --text-56: 56px;
+  --text-58: 58px;
+  --text-60: 60px;
+  --text-62: 62px;
+  --text-64: 64px;
+  --text-66: 66px;
+  --text-68: 68px;
+  --text-70: 70px;
+  --text-72: 72px;
+  --text-74: 74px;
+  --text-76: 76px;
+  --text-78: 78px;
+  --text-80: 80px;
+  --text-82: 82px;
+  --text-84: 84px;
+  --text-86: 86px;
+  --text-88: 88px;
+  --text-90: 90px;
+  --text-92: 92px;
+  --text-94: 94px;
+  --text-96: 96px;
+  --text-98: 98px;
+  --text-100: 100px;
+  --text-120: 120px;
+  --text-140: 140px;
+  --text-180: 180px;
+  --text-inherit: inherit;
+
+  /* padding - margin - height - width - gap */
+  --spacing: 1px;
+  --spacing-0: 0px;
+  --spacing-4: 4px;
+  --spacing-5: 5px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-9: 9px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-13: 13px;
+  --spacing-14: 14px;
+  --spacing-15: 15px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-22: 22px;
+  --spacing-24: 24px;
+  --spacing-25: 25px;
+  --spacing-26: 26px;
+  --spacing-28: 28px;
+  --spacing-30: 30px;
+  --spacing-32: 32px;
+  --spacing-34: 34px;
+  --spacing-35: 35px;
+  --spacing-36: 36px;
+  --spacing-38: 38px;
+  --spacing-40: 40px;
+  --spacing-42: 42px;
+  --spacing-44: 44px;
+  --spacing-45: 45px;
+  --spacing-46: 46px;
+  --spacing-48: 48px;
+  --spacing-50: 50px;
+  --spacing-52: 52px;
+  --spacing-54: 54px;
+  --spacing-55: 55px;
+  --spacing-56: 56px;
+  --spacing-58: 58px;
+  --spacing-60: 60px;
+  --spacing-62: 62px;
+  --spacing-64: 64px;
+  --spacing-65: 65px;
+  --spacing-66: 66px;
+  --spacing-68: 68px;
+  --spacing-70: 70px;
+  --spacing-72: 72px;
+  --spacing-74: 74px;
+  --spacing-75: 75px;
+  --spacing-76: 76px;
+  --spacing-78: 78px;
+  --spacing-80: 80px;
+  --spacing-82: 82px;
+  --spacing-84: 84px;
+  --spacing-85: 85px;
+  --spacing-86: 86px;
+  --spacing-88: 88px;
+  --spacing-90: 90px;
+  --spacing-92: 92px;
+  --spacing-94: 94px;
+  --spacing-95: 95px;
+  --spacing-96: 96px;
+  --spacing-98: 98px;
+  --spacing-100: 100px;
+  --spacing-120: 120px;
+  --spacing-50mp: -50%;
+  --spacing-50p: 50%;
+  --spacing-100p: 100%;
+  --spacing-114p: 114%;
+  --spacing-115p: 115%;
+  --spacing-120p: 120%;
+  --spacing-125p: 125%;
+  --spacing-128p: 128%;
+  --spacing-130p: 130%;
+  --spacing-133p: 133%;
+  --spacing-135p: 135%;
+  --spacing-136p: 136%;
+  --spacing-137p: 137%;
+  --spacing-138p: 138%;
+  --spacing-140p: 140%;
+  --spacing-142p: 142%;
+  --spacing-150p: 150%;
+  --spacing-160p: 160%;
+  --spacing-1625p: 162.5%;
+  --spacing-inherit: inherit;
+
+  /* shadow */
+  --shadow-card: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  --shadow-header: 0px 5px 15px rgba(0, 0, 0, 0.17);
+  --drop-shadow-streched : 0px 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-blog-card : 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+  /* border-radius */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+  --radius-25: 25px;
+  --radius-30: 30px;
+  --radius-60: 60px;
+  --radius-70: 70px;
+  --radius-110: 110px;
+  --radius-50p: 50%;
+
+  /* screen */
+  --breakpoint-374: 374px;
+  --breakpoint-375: 375px;
+  --breakpoint-390: 390px;
+  --breakpoint-400: 400px;
+  --breakpoint-450: 450px;
+  --breakpoint-479: 479px;
+  --breakpoint-575: 575px;
+  --breakpoint-576: 576px;
+  --breakpoint-639: 639px;
+  --breakpoint-640: 640px;
+  --breakpoint-767: 767px;
+  --breakpoint-768: 768px;
+  --breakpoint-990: 990px;
+  --breakpoint-1023: 1023px;
+  --breakpoint-1024: 1024px;
+  --breakpoint-1199: 1199px;
+  --breakpoint-1200: 1200px;
+  --breakpoint-1280: 1280px;
+  --breakpoint-1300: 1300px;
+  --breakpoint-1365: 1365px;
+  --breakpoint-1366: 1366px;
+  --breakpoint-1399: 1399px;
+  --breakpoint-1400: 1400px;
+  --breakpoint-1440: 1440px;
+  --breakpoint-1441: 1441px;
+  --breakpoint-1512: 1512px;
+  --breakpoint-1600: 1600px;
+  --breakpoint-1800: 1800px;
+  --breakpoint-1920: 1920px;  
+  --breakpoint-2000: 2000px;
+}

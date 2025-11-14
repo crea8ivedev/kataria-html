@@ -1,0 +1,119 @@
+*,
+::before,
+::after {
+  @apply box-border ;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply !outline-dotted !outline-1 !outline-red1;
+}
+body {
+  @apply font-body font-normal text-16 leading-1625p text-black antialiased ;
+}
+
+body.menu-open {
+  @apply overflow-hidden;
+}
+a {
+  @apply transition-all duration-300 ease-in-out cursor-pointer font-inherit text-inherit leading-inherit tracking-normal;
+}
+p {
+  @apply font-body text-body-2 leading-18 tracking-normal;
+}
+b {
+  @apply font-inherit text-inherit leading-inherit font-bold;
+}
+span {
+  @apply font-inherit text-inherit leading-inherit;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  @apply outline-0 no-underline shadow-none;
+}
+button {
+  @apply bg-transparent border-0;
+}
+
+ul {
+  @apply p-0 mt-0;
+}
+
+ul li {
+  @apply list-none;
+}
+
+img {
+  @apply block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-heading uppercase ;
+}
+
+h1 , .h1 {
+  @apply text-heading-1 leading-73  max-1440:text-heading-1-tablet max-1440:leading-40 max-768:text-heading-1-mobile max-768:leading-38 ;
+}
+h1.big , .h1.big {
+  @apply text-heading-1-big leading-91 max-1440:text-heading-1-tablet max-1440:leading-75 max-768:!text-[44px] max-768:!leading-52;
+}
+h2 , .h2 {
+  @apply text-heading-2 leading-58 max-1440:text-heading-2-tablet max-1440:leading-42 max-1023:text-heading-2-mobile max-1023:leading-37 ;
+}
+h3, .h3 {
+  @apply text-heading-3 leading-37 max-1023:text-heading-3-mobile max-1023:leading-29 ;
+}
+h4, .h4 {
+  @apply text-heading-4 leading-34 max-575:text-heading-4-mobile max-575:leading-25;
+}
+h5, .h5 {
+  @apply text-heading-5 leading-23;
+}
+h6, .h6 {
+  @apply text-heading-6 leading-20;
+}
+
+.content {
+  @apply relative flex flex-col w-full;
+}
+
+.content p a {
+  @apply ease-linear duration-300 delay-150  text-body-2 leading-24 text-red1 hover:text-grey font-bold font-body antialiased;
+}
+
+.content p {
+  @apply text-font text-body-2 leading-18 font-normal  not-italic relative block m-0 p-0  font-body;
+}
+.content p + p {
+  @apply mt-[20px];
+}
+
+.content.bold p {
+  @apply font-bold;
+}
+
+.content.white p {
+  @apply text-offwhite;
+}
+
+.content.black p {
+  @apply text-black;
+}
