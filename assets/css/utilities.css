@@ -117,3 +117,34 @@
 .announcement-bar .swiper-wrapper {
   transition-timing-function: linear !important
   }
+
+
+.service-slider-main .swiper-wrapper {
+    transition-timing-function: linear !important
+    }
+
+.service-slider-main{
+  @apply w-full bg-[#0b3a75] py-[15px]
+}
+
+.slide-rep{
+  @apply flex items-center px-[28px] border-r border-white/30
+}₹
+
+.leading-none{
+  @apply font-body;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+

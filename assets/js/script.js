@@ -26,3 +26,18 @@ if (document.querySelector('.announcement')) {
         allowTouchMove: false,
     });
 }
+
+
+var swiper = new Swiper(".featureSwiper", {
+    slidesPerView: 1.3,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 0 },
+    speed: 8000,
+    breakpoints: {
+      640: { slidesPerView: 2.2 },
+      768: { slidesPerView: 3.2 },
+      1024: { slidesPerView: 5 }
+    }
+
+  });
