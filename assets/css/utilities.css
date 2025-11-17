@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
 
- 
-=======
 :root{
     --left-img: url('../assets/images/truckleft.png');
     --right-img: url('../assets/images/truckright.png');
@@ -120,4 +117,3 @@
 .announcement-bar .swiper-wrapper {
   transition-timing-function: linear !important
   }
->>>>>>> Stashed changes
