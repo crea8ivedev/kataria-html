@@ -1,2 +1,123 @@
+<<<<<<< Updated upstream
 
  
+=======
+:root{
+    --left-img: url('../assets/images/truckleft.png');
+    --right-img: url('../assets/images/truckright.png');
+  }
+  
+  /* Headline Gradient */
+  .gradient-text {
+    background: linear-gradient(90deg, #D82626 0.04%, #D82626 30.59%, #0055A4 141.65%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Fonts */
+  .font-onest {
+    font-family: "Onest", sans-serif;
+  }
+  
+  .font-PlusJakarta {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  
+  /* Welcome text */
+  .welcome-text {
+    color: var(--Natural-900, #000);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  /* Trucks */
+  .truck {
+    background-repeat: no-repeat;
+    background-position: 0px -80.775px;
+    background-size: 100% 138.34%;
+    opacity: 0.1;
+    pointer-events: none;
+    flex-shrink: 0;
+    display: block;
+  }
+  
+  .truck-left {
+    width: 544px;
+    height: 393px;
+    aspect-ratio: 544 / 393;
+    background-image: var(--left-img);
+  }
+  
+  .truck-right {
+    width: 543px;
+    height: 393px;
+    aspect-ratio: 543 / 393;
+    background-image: var(--right-img);
+  }
+  
+  /* Responsive overrides */
+  @media (max-width: 1100px) {
+    .truck-left,
+    .truck-right {
+      width: 36vw;
+      height: auto;
+      background-position: 0px -60px;
+      background-size: 100% 140%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .truck-left,
+    .truck-right {
+      display: none;
+    }
+  }
+
+  .announcement-bar .swiper-slide 
+  {
+    width: auto;
+  }
+
+.hero-banner-main{
+  @apply relative w-full min-h-[90vh] flex justify-center overflow-hidden bg-white
+}
+
+.banner-truck-img-left{
+  @apply hidden md:block absolute left-0 bottom-0 w-[420px] object-contain opacity-15
+}
+
+.banner-truck-img-right{
+  @apply hidden md:block absolute right-0 bottom-0 w-[420px] object-contain opacity-15
+}
+
+.banner-content{
+  @apply relative z-10 max-w-[1500px] mx-auto px-6 pt-20 text-center md:w-8/12 lg:w-6/12
+}
+
+.banner-content-pre{
+  @apply mt-[60px] sm:mt-[80px] lg:mt-[113px] mb-[15px] sm:mb-[18px] lg:mb-[20px]
+  text-[35px] leading-[100%] font-medium text-center text-[#1A1A1A]
+}
+
+.banner-h1{
+  @apply inline-block text-[110px] leading-[1.1] font-bold
+  bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
+  text-transparent bg-clip-text
+  [@media(min-width:374px)]:text-[46px]
+  [@media(min-width:576px)]:text-[70px]
+  [@media(min-width:1024px)]:text-[90px]
+  [@media(min-width:1440px)]:text-[110px]
+}
+
+.banner-content-one p{
+  @apply text-[18px] leading-[28px] text-gray-400 mt-[28px] max-w-[811px] max-h-[84px] mx-auto text-center
+}
+
+.announcement-bar .swiper-wrapper {
+  transition-timing-function: linear !important
+  }
+>>>>>>> Stashed changes

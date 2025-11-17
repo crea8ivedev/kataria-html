@@ -4,8 +4,13 @@
 @import "./components.css";
 @import "./utilities.css";
 @import "./layout.css";
+<<<<<<< Updated upstream
 /* @import "swiper/swiper-bundle.css"; */
 /* @layer base, components, utilities; */
+=======
+
+@layer base, components, utilities;
+>>>>>>> Stashed changes
 /* @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';  */

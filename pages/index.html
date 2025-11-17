@@ -2,175 +2,161 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tailwind v4+ Starter</title>
-  <!-- In dev you can link to dist/output.css after build / watch -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tailwind v4+ Starter</title>
+    <!-- In dev you can link to dist/output.css after build / watch -->
 
-  <link href="../dist/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="../dist/style.css" rel="stylesheet" />
 
 </head>
 
 <body class="antialiased bg-gray-50 text-slate-800">
-<!-- ================= HEADER ================= -->
-        <header class="w-full bg-white shadow-md border-b border-gray-200">
-
-            <!-- Announcement Bar -->
-            <div class="w-full bg-[#002060] text-white text-sm py-2 text-center">
-                WEL COME TO KATARIA. ADVANCES WISHES OF FESTIVA DT.05/11/2025..WEDNESDAY. DEV DIWALI..GURU NANAK JAYANTI.. આગામી માસ માં આવતા તહેવારો ની શુભેચ્છા.... કટારીયા માં આપનુ સ્વાગત.... આગામી માસ માં આવતા તહેવારો ની શુભેચ્છા.... તા.૦૨/૧૧/૨૦૨૫..રવિવાર.. તા.૧૫/૧૧/૨૦૨૫..શનિવાર.. ઉત્પત્તિ એકાદશી..
-            </div>
-
-            <!-- Header Main -->
-            <div class="w-full px-6">
-                <div class="max-w-[1500px] mx-auto h-[95px] flex items-center justify-between">
-
-                    <!-- Logo -->
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="../assets/images/header-logo.png" alt="Logo" class="h-[60px] w-auto">
-                    </a>
-
-                    <!-- Navigation -->
-                    <nav class="hidden lg:flex items-center gap-10 font-semibold text-[17px]">
-                        <a href="#" class="hover:text-[#D92727] transition">Home</a>
-                        <a href="#" class="hover:text-[#D92727] transition">About Us</a>
-                        <a href="#" class="hover:text-[#D92727] transition">Services</a>
-                        <a href="#" class="hover:text-[#D92727] transition">Brands</a>
-                        <a href="#" class="hover:text-[#D92727] transition">Contact</a>
-                    </nav>
-
-                    <!-- Right Buttons -->
-                    <div class="hidden lg:flex items-center gap-4">
-
-                        <!-- Login Button -->
-                        <a href="#"
-                        class="px-5 py-2 rounded-full bg-[#D92727] text-white text-[15px] font-medium flex items-center gap-2 hover:bg-[#b82020] transition">
-                            <span class="text-[17px]">🔒</span>
-                            Login
-                        </a>
-
-                        <!-- Blue Button -->
-                        <a href="#"
-                        class="px-6 py-2 rounded-full bg-[#004AAD] text-white text-[14px] font-semibold hover:bg-[#003888] transition whitespace-nowrap">
-                            Dealer / Marketing / Employee
-                        </a>
+    <!-- ================= HEADER ================= -->
+    <header class="header-kat">
+        <!-- Announcement Bar -->
+        <div class="announcement announcement-bar-kat">
+            <div class="swiper announcement-bar">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class=" text-white text-sm  text-center">
+                            WEL COME TO KATARIA. ADVANCES WISHES OF FESTIVA DT.05/11/2025..WEDNESDAY. DEV DIWALI..GURU
+                            NANAK JAYANTI..
+                        </div>
                     </div>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="menuToggle"
-                            class="lg:hidden p-2 rounded-md border border-gray-300">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
+                    <div class="swiper-slide">
+                        <div class=" text-white text-sm text-center">
+                            આગામી માસ માં આવતા તહેવારો ની શુભેચ્છા.... કટારીયા માં આપનુ સ્વાગત.... આગામી માસ માં આવતા
+                            તહેવારો ની
+                            શુભેચ્છા.... તા.૦૨/૧૧/૨૦૨૫..રવિવાર.. તા.૧૫/૧૧/૨૦૨૫..શનિવાર.. ઉત્પત્તિ એકાદશી..
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" text-white text-sm  text-center">
+                            WEL COME TO KATARIA. ADVANCES WISHES OF FESTIVA DT.05/11/2025..WEDNESDAY. DEV DIWALI..GURU
+                            NANAK JAYANTI..
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" text-white text-sm text-center">
+                            આગામી માસ માં આવતા તહેવારો ની શુભેચ્છા.... કટારીયા માં આપનુ સ્વાગત.... આગામી માસ માં આવતા
+                            તહેવારો ની
+                            શુભેચ્છા.... તા.૦૨/૧૧/૨૦૨૫..રવિવાર.. તા.૧૫/૧૧/૨૦૨૫..શનિવાર.. ઉત્પત્તિ એકાદશી..
+                        </div>
+                    </div>
 
                 </div>
             </div>
+        </div>
+        <!-- Header Main -->
+        <div class="header-main">
+            <div class="header-wrape">
 
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden px-6 pb-6 pt-3 space-y-4 text-[17px] font-medium">
-                <a href="#" class="block py-2 border-b">Home</a>
-                <a href="#" class="block py-2 border-b">About Us</a>
-                <a href="#" class="block py-2 border-b">Services</a>
-                <a href="#" class="block py-2 border-b">Brands</a>
-                <a href="#" class="block py-2 border-b">Contact</a>
-                <a href="#" class="block py-3 text-center bg-[#D92727] text-white rounded-md font-semibold">Login</a>
-                <a href="#" class="block py-3 text-center bg-[#004AAD] text-white rounded-md font-semibold">
-                    Dealer / Marketing / Employee
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-3">
+                    <img src="../assets/images/header-logo.png" alt="Logo" class="h-[60px] w-auto">
                 </a>
+
+                <!-- Navigation -->
+                <nav class="header-nev">
+                    <a href="#" class="font-bold">Home</a>
+                    <a href="#" class="transition">About Us</a>
+                    <a href="#" class="transition">Services</a>
+                    <a href="#" class="transition">Brands</a>
+                    <a href="#" class="transition">Contact</a>
+                </nav>
+
+                <!-- Right Buttons -->
+                <div class="header-button">
+                    <!-- Login Button -->
+                    <a href="#" class="header-red-button">
+                        <span class="text-[17px]">
+                            <img src="../assets/images/login-logo.svg" alt="Login Icon">
+                        </span> Login
+                    </a> <!-- Blue Button -->
+                    <div class="header-blue-button">
+                        <a href="#">Dealer</a>
+                        <span>/</span>
+                        <a href="#">Marketing</a>
+                        <span>/</span>
+                        <a href="#">Employee</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle" class="lg:hidden p-2 rounded-md border border-gray-300">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
             </div>
-
-        </header>
-
-
-  <main class="mt-12">
-
-    <!-- ================= HERO / BANNER ================= -->
-    <section class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-white">
-
-        <!-- Left Truck -->
-        <img src="../assets/images/truckleft.png"
-             class="hidden md:block absolute left-0 bottom-0 w-[420px] object-contain opacity-90"
-             alt="Left Truck">
-    
-        <!-- Right Truck -->
-        <img src="../assets/images/truckright.png"
-             class="hidden md:block absolute right-0 bottom-0 w-[420px] object-contain opacity-90"
-             alt="Right Truck">
-    
-        <!-- Banner Content -->
-        <div class="relative z-10 max-w-[1500px] mx-auto px-6 pt-20 text-center">
-    
-            <p class="text-lg tracking-wide text-gray-600 mb-4">
-                Welcome To
-            </p>
-    
-            <!-- ONE LINE TITLE + CORRECT GRADIENT -->
-            <h1 class="text-[70px] md:text-[110px] leading-[1.1] font-bold whitespace-nowrap 
-                       bg-gradient-to-r from-[#B21F24] to-[#532E8C] 
-                       text-transparent bg-clip-text uppercase">
-                Kataria Enterprise
-            </h1>
-    
-            <p class="text-[18px] leading-[28px] text-gray-600 mt-6 max-w-[900px] mx-auto">
-                Kataria Enterprise is a multi-services customer-focused organization primarily focused
-                on providing world-class customer services in areas of marketing management,
-                supply chain management and warehouse management.
-            </p>
-    
-            <p class="text-[18px] leading-[28px] text-gray-600 mt-6 max-w-[950px] mx-auto">
-                Our entrepreneurial spirit, business acumen and competent team enable us to deliver
-                maximum value and efficiency to our corporate clients — including Balaji Wafers,
-                Vadilal Ice-cream and Coca-Cola.
-            </p>
-    
         </div>
-    </section>
-    
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="mt-16 bg-slate-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <div class="flex flex-col md:flex-row md:justify-between gap-6">
-        <div>
-          <p class="font-semibold">Brand</p>
-          <p class="text-sm text-slate-600 mt-2">Small description about your product.</p>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden px-6 pb-6 pt-3 space-y-4 text-[17px] font-medium">
+            <a href="#" class="block py-2 border-b">Home</a>
+            <a href="#" class="block py-2 border-b">About Us</a>
+            <a href="#" class="block py-2 border-b">Services</a>
+            <a href="#" class="block py-2 border-b">Brands</a>
+            <a href="#" class="block py-2 border-b">Contact</a>
+            <a href="#" class="block py-3 text-center bg-[#D92727] text-white rounded-md font-semibold">Login</a>
+            <a href="#" class="block py-3 text-center bg-[#004AAD] text-white rounded-md font-semibold">
+                Dealer / Marketing / Employee
+            </a>
         </div>
-        <nav class="flex gap-6">
-          <a class="text-sm text-slate-700 hover:underline" href="#">Contact</a>
-          <a class="text-sm text-slate-700 hover:underline" href="#">Privacy</a>
-          <a class="text-sm text-slate-700 hover:underline" href="#">Terms</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
 
-  <script type="module" src="../assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+    </header>
 
-    document.getElementById("menuToggle").onclick = function () {
-        document.getElementById("mobileMenu").classList.toggle("hidden");
-    };
+    <main class="mt-12">
+        <!-- ================= HERO / BANNER ================= -->
+        <section class="hero-banner-main">
+            <img src="../assets/images/truckleft.png" class="banner-truck-img-left" alt="Left Truck">
+            <img src="../assets/images/truckright.png" class="banner-truck-img-right" alt="Right Truck">
+            <!-- Banner Content -->
+            <div class="banner-content">
+                <p class="banner-content-pre">
+                    Welcome To
+                </p>
+                <h1 class="banner-h1">
+                    Kataria Enterprise
+                </h1>
+                <div class="banner-content-one">
+                    <p>
+                        Kataria Enterprise is a multi-services customer focused organization primarily focused on providing world-class customer services in areas of marketing management, supply chain management and warehouse management.
+                    </p>
+                    <p>
+                        Our entrepreneurial spirit, business acumen, sound domain knowledge and competent team enable us to deliver maximum value, efficiency and improved bottom lines to our corporate clients. We have been a proud team to be associated with some of the most renowned business houses like Balaji Wafers, Vadilal Ice-Cream and Coca-Cola.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    if (document.querySelector('.announcement')) {
-      const announcement = document.querySelector('.announcement');
-      new Swiper('.announcement-bar', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        speed: 1000,
-        autoplay: {
-          delay: 4000,
-        },
-        effect: "slide",
-        allowTouchMove: false,
-      })
-    }
-  </script>
+    <!-- Footer -->
+    <footer class="mt-16 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+            <div class="flex flex-col md:flex-row md:justify-between gap-6">
+                <div>
+                    <p class="font-semibold">Brand</p>
+                    <p class="text-sm text-slate-600 mt-2">Small description about your product.</p>
+                </div>
+                <nav class="flex gap-6">
+                    <a class="text-sm text-slate-700 hover:underline" href="#">Contact</a>
+                    <a class="text-sm text-slate-700 hover:underline" href="#">Privacy</a>
+                    <a class="text-sm text-slate-700 hover:underline" href="#">Terms</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../assets/js/script.js"></script>
 
 </body>
 
