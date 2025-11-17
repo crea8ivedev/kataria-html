@@ -4,8 +4,8 @@
 @import "./components.css";
 @import "./utilities.css";
 @import "./layout.css";
-@import "swiper/swiper-bundle.css";
-@layer base, components, utilities;
+/* @import "swiper/swiper-bundle.css"; */
+/* @layer base, components, utilities; */
 /* @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';  */

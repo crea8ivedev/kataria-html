@@ -1,3 +1,6 @@
+
+ /* body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #030303; } */
+
 /* *,
 ::before,
 ::after {
@@ -14,6 +17,7 @@ select:focus {
 body {
   @apply font-body font-normal text-16 leading-1625p text-black antialiased ;
 }
+
 
 body.menu-open {
   @apply overflow-hidden;
@@ -66,7 +70,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  @apply font-heading uppercase ;
+  @apply font-heading  ;
 }
 
 h1 , .h1 {
@@ -117,3 +121,5 @@ h6, .h6 {
 .content.black p {
   @apply text-black;
 } */
+
+

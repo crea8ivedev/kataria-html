@@ -455,6 +455,10 @@
     @apply max-767:text-body-1 max-767:leading-24
   }
 
+  .footer-bottom-bar{
+    @apply max-w-[1395px] mx-auto px-4 py-6 flex flex-col md:flex-row justify-between text-[14px] text-gray-300
+  }
+
   /* techyscouts logo start */
 
 #techyscouts-logo {
@@ -528,3 +532,4 @@
     transform: translateY(100%) rotate(-10deg);
   }
 }
+
