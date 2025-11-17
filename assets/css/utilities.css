@@ -142,6 +142,34 @@
 
 
 
+  /* Swiper Container */
+  .swiper-wrapper-custom {
+    @apply w-full h-full;
+  }
+
+  /* Swiper Slide */
+  .swiper-slide-custom {
+    @apply flex items-center justify-center text-[18px] bg-[#444] text-white;
+  }
+
+  /* Slide Images */
+  .swiper-slide-img {
+    @apply block w-full h-full object-cover;
+  }
+
+  /* Responsive: on mobile show 1 slide */
+  @media (max-width: 768px) {
+    .swiper-mobile-1 {
+      --swiper-slides-per-view: 1 !important;
+    }
+  }
+
+  /* Responsive: on tablet show 2 slides */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .swiper-tablet-2 {
+      --swiper-slides-per-view: 2 !important;
+    }
+  }
 
 
 

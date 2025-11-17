@@ -8,165 +8,207 @@
     <!-- In dev you can link to dist/output.css after build / watch -->
 
     <link href="../dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="relative text-white">
-    <header>
-
-    </header>
-
+    <header></header>
 
     <main>
-        <section class="container mx-auto">
+        <section class="container testimonial mx-auto">
+
+            <swiper-container class="mySwiper swiper-wrapper-custom swiper-mobile-1 swiper-tablet-2" pagination="true"
+                pagination-clickable="true" space-between="30" slides-per-view="3">
+
+                <swiper-slide class="swiper-slide-custom">Kataria Enterprise has been our trusted logistics partner for
+                    years. Their timely deliveries and nationwide reach ensure our products are always available and
+                    fresh</swiper-slide>
+                <swiper-slide class="swiper-slide-custom">We rely on Kataria’s expertise in cold chain management. Their
+                    temperature-controlled logistics maintain the perfect quality of our ice creams across all regions.
+                    The team’s coordination.</swiper-slide>
+                <swiper-slide class="swiper-slide-custom">Kataria Enterprise has been instrumental in driving our
+                    regional distribution success. Their streamlined logistics operations, advanced tracking systems,
+                    and well-managed network </swiper-slide>
+                <swiper-slide class="swiper-slide-custom">Kataria Enterprise has been our trusted logistics partner for
+                    years. Their timely deliveries and nationwide reach ensure our products are always available and
+                    fresh</swiper-slide>
+                <swiper-slide class="swiper-slide-custom">We rely on Kataria’s expertise in cold chain management. Their
+                    temperature-controlled logistics maintain the perfect quality of our ice creams across all regions.
+                    The team’s coordination.</swiper-slide>
+                <swiper-slide class="swiper-slide-custom">Kataria Enterprise has been instrumental in driving our
+                    regional distribution success. Their streamlined logistics operations, advanced tracking systems,
+                    and well-managed network </swiper-slide>
+
+
+            </swiper-container>
 
         </section>
+
     </main>
 
 
 
-
     <footer class="relative w-full bg-black text-white overflow-hidden">
-
-        <!-- Background Pattern (low opacity) -->
-        <!-- <div
-            class="absolute inset-0 bg-[url('../assets/images/footer-bg.png')] bg-cover bg-center opacity-10 pointer-events-none">
-        </div> -->
-        <div
-            class="absolute inset-0 bg-[url('../assets/images/footer-bg.png')] bg-cover bg-center  pointer-events-none">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-[url('../assets/images/footer-bg.png')] bg-cover bg-center pointer-events-none">
         </div>
 
-        <!-- FOOTER WRAPPER -->
-        <div class="relative w-full py-20">
-
+        <!-- Main Wrapper -->
+        <div class="relative w-full pt-80 pb-50 md:pt-120 md:pb-80">
             <!-- TOP SECTION -->
-            <div class="max-w-[1395px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between mb-20">
+            <div
+                class="max-w-[1395px] mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 flex flex-col md:flex-row items-center justify-between mb-60">
+                <!-- Text -->
                 <div class="max-w-[660px] text-left">
                     <h4 class="text-3xl font-bold">Ready To Partner With Us?</h4>
                     <p class="mt-4 text-[15px] leading-relaxed">
-                        Join hands with Kataria Enterprise to experience innovative logistics and supply chain solutions
-                        that ensure speed, safety, and excellence.
+                        Join hands with Kataria Enterprise to experience innovative
+                        logistics and supply chain solutions that ensure speed, safety,
+                        and excellence.
                     </p>
                 </div>
 
+                <!-- Circle Button -->
                 <div class="mt-10 md:mt-0 relative w-174 h-174 flex items-center justify-center">
-
-                    <!-- Clickable link wrapper -->
-                    <a href="/contact" class="mt-10 md:mt-0 relative w-174 h-174 flex items-center justify-center 
-       active:scale-90 hover:scale-95 transition-all duration-300 cursor-pointer block">
-
-                        <!-- Rotating curve text -->
+                    <a href="/contact"
+                        class="relative w-174 h-174 flex items-center justify-center active:scale-90 hover:scale-95 transition-all duration-300 cursor-pointer block">
                         <img src="../assets/images/curve_text.svg"
-                            class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]" alt="">
+                            class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]" alt="" />
 
-                        <!-- Arrow (fixed, press animation on hover/click) -->
-                        <img src="../assets/images/aerrow.svg" class="w-40 h-40 z-10 pointer-events-none" alt="">
+                        <img src="../assets/images/aerrow.svg" class="w-40 h-40 z-10 pointer-events-none" alt="" />
                     </a>
-
                 </div>
             </div>
 
-            <!-- MIDDLE SECTION -->
-            <div class="max-w-[1395px] mx-auto px-4 flex flex-col lg:flex-row gap-16 mb-20">
-
+            <!-- MIDDLE SECTION
+            <div class="max-w-[1395px] mx-auto 
+                        px-20 sm:px-40  md:px-60 lg:px-80 xl:px-20 2xl:px-20
+                        flex flex-col lg:flex-row gap-352 xl:gap-200 lg:gap-80 md:gap-40 sm:gap-40 mb-60"> -->
+            <div
+                class="max-w-[1395px] mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 flex flex-col lg:flex-row gap-20 sm:gap-40 md:gap-80 lg:gap-[100px] xl:gap-[300px] 2xl:gap-[352px] mb-60">
                 <!-- LEFT SIDE -->
-                <div class="flex-1">
-                    <img src="../assets/images/footer-logo.svg" alt="" class="w-295 h-70 mb-6">
+                <div class="flex flex-col gap-30 max-w-320">
+                    <img src="../assets/images/footer-logo.svg" class="w-295 h-70 mb-6" alt="" />
 
                     <p class="max-w-sm text-[15px] leading-relaxed">
-                        Delivering excellence in distribution, logistics, and product supply across India.
-                        Building trust through quality, speed, and reliability.
+                        Delivering excellence in distribution, logistics, and product
+                        supply across India. Building trust through quality, speed, and
+                        reliability.
                     </p>
-                    <div class="flex gap-6 mt-6">
-                        <!-- Facebook -->
-                        <div class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent
-                                    transition-all duration-500 ease-out cursor-pointer
-                                    hover:bg-white hover:scale-110 hover:invert">
-                            <img src="../assets/images/facebook.png"
-                                class=" transition-all duration-500 ease-out group-hover:invert" alt="">
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-20 mt-20">
+                        <div
+                            class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent transition-all duration-500 cursor-pointer hover:bg-white hover:scale-110 hover:invert">
+                            <a href="https://www.facebook.com/">
+                                <img src="../assets/images/facebook.png"
+                                    class="transition-all duration-500 group-hover:invert" />
+                            </a>
                         </div>
 
-                        <!-- X -->
-                        <div class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent
-                                    transition-all duration-500 ease-out cursor-pointer
-                                    hover:bg-white hover:scale-110 hover:invert">
-                            <img src="../assets/images/x-logo.png"
-                                class=" transition-all duration-500 ease-out group-hover:invert" alt="">
+                        <div
+                            class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent transition-all duration-500 cursor-pointer hover:bg-white hover:scale-110 hover:invert">
+                            <a href="https://x.com/">
+                                <img src="../assets/images/x-logo.png"
+                                    class="transition-all duration-500 group-hover:invert" />
+                            </a>
                         </div>
 
-                        <!-- YouTube -->
-                        <div class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent
-                                    transition-all duration-500 ease-out cursor-pointer
-                                    hover:bg-white hover:scale-110 hover:invert">
-                            <img src="../assets/images/youtube.png"
-                                class=" transition-all duration-500 ease-out group-hover:invert" alt="">
+                        <div
+                            class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent transition-all duration-500 cursor-pointer hover:bg-white hover:scale-110 hover:invert">
+                            <a href="https://www.youtube.com">
+                                <img src="../assets/images/youtube.png"
+                                    class="transition-all duration-500 group-hover:invert" />
+                            </a>
                         </div>
 
-                        <!-- Instagram -->
-                        <div class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent
-                                    transition-all duration-500 ease-out cursor-pointer
-                                    hover:bg-white hover:scale-110 hover:invert">
-                            <img src="../assets/images/instagram.png"
-                                class=" transition-all duration-500 ease-out group-hover:invert" alt="">
+                        <div
+                            class="group w-40 h-40 flex items-center justify-center rounded-full bg-transparent transition-all duration-500 cursor-pointer hover:bg-white hover:scale-110 hover:invert">
+                            <a href="https://www.instagram.com">
+                                <img src="../assets/images/instagram.png"
+                                    class="transition-all duration-500 group-hover:invert" />
+                            </a>
                         </div>
                     </div>
-
-
                 </div>
 
-                <!-- RIGHT SIDE (3 Columns) -->
-                <div class="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-10 text-left">
-
-                    <!-- Quick Links -->
-                    <div>
+                <!-- RIGHT SIDE -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-90 md:gap-45 sm:gap-15 text-left">
+                    <div class="flex flex-col gap-20">
                         <h3 class="font-bold text-lg mb-4">Quick Link</h3>
-                        <ul class="space-y-2 text-[15px]">
-                            <li><a href="#" class="hover:text-gray-300">About Us</a></li>
-                            <li><a href="#" class="hover:text-gray-300">Our Team</a></li>
-                            <li><a href="#" class="hover:text-gray-300">Careers</a></li>
-                            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Services -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Services</h3>
-                        <ul class="space-y-2 text-[15px]">
-                            <li>FMCG Distribution</li>
-                            <li>Cold Chain Logistics</li>
-                            <li>Retail Supply Solutions</li>
-                            <li>Industrial Product Delivery</li>
-                            <li>Warehousing & Transport</li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Contact</h3>
-                        <ul class="space-y-2 text-[15px] leading-relaxed">
-                            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-                            <li><a href="mailto:info@katariaenterprise.com">info@katariaenterprise.com</a></li>
+                        <ul class="text-[15px] flex flex-col gap-20">
                             <li>
-                                Plot No. 22, GIDC Estate,<br>
-                                Junagadh, Gujarat, India 362001
+                                <a href="/about.html" class="hover:text-blue-500">About Us</a>
+                            </li>
+                            <li>
+                                <a href="/team.html" class="hover:text-blue-500">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="/careers.html" class="hover:text-blue-500">Careers</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" class="hover:text-blue-500">Contact</a>
                             </li>
                         </ul>
                     </div>
 
+                    <div class="flex flex-col gap-20">
+                        <h3 class="font-bold text-lg mb-4">Services</h3>
+                        <ul class="text-[15px] flex flex-col gap-20">
+                            <li>
+                                <a href="#" class="hover:text-blue-500">FMCG Distribution</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-500">Cold Chain Logistics</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-500">Retail Supply Solutions</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-500">Industrial Product Delivery</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-500">Warehousing & Transport</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col gap-20">
+                        <h3 class="font-bold text-lg mb-4">Contact</h3>
+                        <ul class="text-[15px] leading-relaxed flex flex-col gap-20 md:min-w-">
+                            <li>
+                                <a href="tel:+919876543210" class="hover:text-blue-500">+91 98765 43210</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@katariaenterprise.com"
+                                    class="hover:text-blue-500">info@katariaenterprise.com</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-500">
+                                    Plot No. 22, GIDC Estate,<br />Junagadh, Gujarat, India
+                                    362001
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <!-- BOTTOM BAR -->
-            <div class="border-t border-[#222]">
-                <div class="footer-bottom-bar">
+            <div
+                class="border-t border-[#222] max-w-[1395px] mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 py-25">
+                <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-20">
                     <p>All Right Reserved © 2025</p>
-                    <p class="mt-3 md:mt-0">Privacy Policy – Terms & Condition</p>
+                    <a href="/privacy.html" class="hover:text-blue-500">
+                        Privacy Policy – Terms & Condition
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
