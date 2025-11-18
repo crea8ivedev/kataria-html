@@ -70,7 +70,11 @@ h6,
 .h4,
 .h5,
 .h6 {
+<<<<<<< Updated upstream
   @apply font-heading  ;
+=======
+  @apply font-heading ;
+>>>>>>> Stashed changes
 }
 
 h1 , .h1 {
@@ -93,6 +97,7 @@ h5, .h5 {
 }
 h6, .h6 {
   @apply text-heading-6 leading-20;
+<<<<<<< Updated upstream
 }
 
 .content {
@@ -123,3 +128,6 @@ h6, .h6 {
 } */
 
 
+=======
+}
+>>>>>>> Stashed changes

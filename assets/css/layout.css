@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* Header Start */
 .header .announcement-bar .swiper-slide p {
     @apply text-white max-1023:text-body-4 max-1023:leading-14
@@ -575,3 +576,5 @@
   @apply underline underline-offset-4
 }
 
+=======
+>>>>>>> Stashed changes
