@@ -88,12 +88,20 @@
 
 
                 <!-- Mobile Menu Button -->
-                <button role="button" tabindex="0" class="navbar-toggler min-1199:hidden max-1199:order-1 z-1 border-0 bg-transparent p-0 max-1199:ml-30 cursor-pointer" type="button">
+                <button role="button" tabindex="0"
+                    class="navbar-toggler min-1199:hidden max-1199:order-1 z-1 border-0 bg-transparent p-0 max-1199:ml-30 cursor-pointer"
+                    type="button">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_10067_5283)">
-                            <path d="M18.0645 0.967773H1.93548C0.870968 0.967773 0 1.83874 0 2.90326C0 3.96777 0.870968 4.83874 1.93548 4.83874H18.0645C19.129 4.83874 20 3.96777 20 2.90326C20 1.83874 19.129 0.967773 18.0645 0.967773Z" fill="black"></path>
-                            <path d="M18.0645 8.06445H1.93548C0.870968 8.06445 0 8.93542 0 9.99994C0 11.0645 0.870968 11.9354 1.93548 11.9354H18.0645C19.129 11.9354 20 11.0645 20 9.99994C20 8.93542 19.129 8.06445 18.0645 8.06445Z" fill="black"></path>
-                            <path d="M18.0645 15.1611H1.93548C0.870968 15.1611 0 16.0321 0 17.0966C0 18.1611 0.870968 19.0321 1.93548 19.0321H18.0645C19.129 19.0321 20 18.1611 20 17.0966C20 16.0321 19.129 15.1611 18.0645 15.1611Z" fill="black"></path>
+                            <path
+                                d="M18.0645 0.967773H1.93548C0.870968 0.967773 0 1.83874 0 2.90326C0 3.96777 0.870968 4.83874 1.93548 4.83874H18.0645C19.129 4.83874 20 3.96777 20 2.90326C20 1.83874 19.129 0.967773 18.0645 0.967773Z"
+                                fill="black"></path>
+                            <path
+                                d="M18.0645 8.06445H1.93548C0.870968 8.06445 0 8.93542 0 9.99994C0 11.0645 0.870968 11.9354 1.93548 11.9354H18.0645C19.129 11.9354 20 11.0645 20 9.99994C20 8.93542 19.129 8.06445 18.0645 8.06445Z"
+                                fill="black"></path>
+                            <path
+                                d="M18.0645 15.1611H1.93548C0.870968 15.1611 0 16.0321 0 17.0966C0 18.1611 0.870968 19.0321 1.93548 19.0321H18.0645C19.129 19.0321 20 18.1611 20 17.0966C20 16.0321 19.129 15.1611 18.0645 15.1611Z"
+                                fill="black"></path>
                         </g>
                         <defs>
                             <clipPath id="clip0_10067_5283">
@@ -151,58 +159,84 @@
         </section>
 
         <!-- ================= SERVICE / SLIDER ================= -->
-        <section class="service-slider-main">
-            <div class="mx-auto">
+        <!-- Feature bar section -->
+        <section class="service-slider-main bg-[#0b4cad] py-16">
+            <div class="mx-auto max-w-[1920px] left-0 top-[908px]">
                 <div class="swiper featureSwiper">
-                    <div class="swiper-wrapper text-white font-semibold text-center">
-
-                        <!-- Slide -->
-                        <div class="swiper-slide flex items-center px-28p border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20p leading-none"><img src="../assets/images/truck-icon.svg"
-                                        alt="Truck"></span>
-                                <span class="text-20p leading-26">On-Time Delivery</span>
+                    <div class="swiper-wrapper text-white font-semibold">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide items-center border-r border-white/30 ">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/truck-icon.svg" alt="Truck" class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    On-Time Delivery
+                                </span>
                             </div>
                         </div>
 
-                        <div class="swiper-slide flex items-center px-28 border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20 leading-none"><img src="../assets/images/factory-icon.svg"
-                                        alt="Factory"></span>
-                                <span class="text-20 leading-26">High-Volume Production</span>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide items-center px-[28px] border-r border-white/30">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/factory-icon.svg" alt="Factory"
+                                        class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    High-Volume Production
+                                </span>
                             </div>
                         </div>
 
-                        <div class="swiper-slide flex items-center px-28 border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20 leading-none"><img src="../assets/images/hand-icon.svg"
-                                        alt="Collaboration"></span>
-                                <span class="text-20 leading-26">Client Collaboration</span>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide items-center px-[28px] border-r border-white/30">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/hand-icon.svg" alt="Collaboration"
+                                        class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    Client Collaboration
+                                </span>
                             </div>
                         </div>
 
-                        <div class="swiper-slide flex items-center px-28 border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20 leading-none"><img src="../assets/images/medul-icon.svg"
-                                        alt="Quality Control"></span>
-                                <span class="text-20 leading-26">Certified Quality Control</span>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide items-center px-[28px] border-r border-white/30">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/medul-icon.svg" alt="Quality Control"
+                                        class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    Certified Quality Control
+                                </span>
                             </div>
                         </div>
 
-                        <!-- Slide -->
-                        <div class="swiper-slide flex items-center px-28p border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20p leading-none"><img src="../assets/images/truck-icon.svg"
-                                        alt="Truck"></span>
-                                <span class="text-20p leading-26">On-Time Delivery</span>
+                        <!-- Duplicate 1 -->
+                        <div class="swiper-slide items-center px-[28px] border-r border-white/30">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/truck-icon.svg" alt="Truck" class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    On-Time Delivery
+                                </span>
                             </div>
                         </div>
 
-                        <div class="swiper-slide flex items-center px-28 border-r border-white/30">
-                            <div class="flex items-center gap-12 justify-center">
-                                <span class="text-20 leading-none"><img src="../assets/images/factory-icon.svg"
-                                        alt="Factory"></span>
-                                <span class="text-20 leading-26">High-Volume Production</span>
+                        <!-- Duplicate 2 -->
+                        <div class="swiper-slide items-center px-[28px] border-r border-white/30">
+                            <div class="flex items-center justify-center gap-[12px]">
+                                <span class="leading-none">
+                                    <img src="../assets/images/factory-icon.svg" alt="Factory"
+                                        class="w-[24px] h-[24px]" />
+                                </span>
+                                <span class="text-[20px] leading-[26px]">
+                                    High-Volume Production
+                                </span>
                             </div>
                         </div>
 
@@ -212,112 +246,325 @@
         </section>
 
         <!-- ================= ABOUT ================= -->
-        <section class="relative bg-white">
-            <div class=" mx-auto px-120 pt-100 pb-105">
-                <div class="flex flex-col lg:flex-row gap-70">
-                    <div class="relative flex-1">
+        <section class="about-main">
+            <div class="px-120">
+                <div class="about-wrape">
+                    <div class="about-main-img">
                         <!-- BIG IMAGE -->
-                        <div class="w-full lg:w-[824px] h-[746px] rounded-[40px] overflow-hidden">
-                            <img src="../assets/images/img-with-con1.webp" alt="Event"
-                                class="w-full h-full object-cover" />
+                        <div class="about-big-image">
+                            <img src="../assets/images/img-with-con1.webp" alt="Event" />
                         </div>
-
                         <!-- FRONT WHITE CARD + CLIPPED TRUCK IMAGE -->
-                        <div class="hidden lg:flex absolute -bottom-[105px] left-1/2 -translate-x-[35%]
-                                   w-[344px] h-[340px] items-center justify-center
-                                   bg-white rounded-[80px] shadow-[0_18px_40px_rgba(0,0,0,0.16)]">
-                            <!-- inner clipped image (mask group 284 x 292) -->
-                            <div class="w-[284px] h-[292px] rounded-[40px] overflow-hidden">
+                        <div class="about-clip-path-card">
+                            <div class="about-clip-path-card-wrap">
                                 <img src="../assets/images/img-with-con2.webp" alt="Truck"
                                     class="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>
                     <!-- RIGHT : text content -->
-                    <div class="flex-1 lg:pt-18">
+                    <div class="text-content-main">
                         <!-- ABOUT US label -->
-                        <div class="flex items-center gap-8 mb-[13px]">
-                            <img src="../assets/images/black-truck.svg" alt="Truck icon"
-                                class="w-[20px] h-[20px] object-contain" />
-                            <span class="text-[14px] leading-[18px] tracking-[1px] uppercase text-[#4A4A4A]">
-                                About Us
-                            </span>
+                        <div class="about-label">
+                            <img src="../assets/images/black-truck.svg" alt="Truck icon" />
+                            <span> About Us </span>
                         </div>
-
                         <!-- Title: 44px, bold -->
-                        <h2
-                            class="mb-[14px] font-bold text-[44px] max-w-[786px] leading-[55px] capitalize text-[#D82626]">
+                        <h2>
                             Delivering Value Through Smart<br />
                             Logistics Innovation
                         </h2>
-
                         <!-- Description: 18px, line-height 34px -->
-                        <p
-                            class="max-w-[688px] font-normal mb-[27px] text-[18px] leading-[34px] capitalize text-[#000000]">
-                            Kataria is a pioneer and leader in the marketing, supply chain and warehouse
-                            management in India. It was the revolutionary approach adopted by Kataria
-                            that helped launch many path-breaking initiatives in the logistics segment and
-                            many were the firsts for the Indian market. In a span of 22 years, Kataria has
-                            consistently explored various ways to bring premium value to the customer,
-                            always setting benchmarks in quality of service, speed and customer
-                            satisfaction. Our entrepreneurial spirit, business acumen.
+                        <p class="about-main-description">
+                            Kataria is a pioneer and leader in the marketing, supply chain and
+                            warehouse management in India. It was the revolutionary approach
+                            adopted by Kataria that helped launch many path-breaking initiatives
+                            in the logistics segment and many were the firsts for the Indian
+                            market. In a span of 22 years, Kataria has consistently explored
+                            various ways to bring premium value to the customer, always setting
+                            benchmarks in quality of service, speed and customer satisfaction. Our
+                            entrepreneurial spirit, business acumen.
                         </p>
-
                         <!-- Bullet list frame: width 448, vertical gap 18px -->
-                        <div class="max-w-[448px] space-y-[18px]">
-                            <ul class="max-w-[448px] space-y-[18px]">
-
-                                <li class="flex items-start gap-[12px]">
-                                    <img src="../assets/images/right-icon.svg" alt="check icon"
-                                        class="w-[32px] h-[32px]" />
-                                    <p
-                                        class="text-[20px] leading-[25px] font-semibold text-[#000000] items-center capitalize">
+                        <div class="bullat-list-main">
+                            <ul>
+                                <li>
+                                    <img src="../assets/images/right-icon.svg" alt="check icon" />
+                                    <p>
                                         Seamless Distribution Network
                                     </p>
                                 </li>
-
-                                <li class="flex items-start gap-[12px]">
-                                    <img src="../assets/images/right-icon.svg" alt="check icon"
-                                        class="w-[32px] h-[32px]" />
-                                    <p
-                                        class="text-[20px] leading-[25px] font-semibold text-[#000000] items-center capitalize">
+                                <li>
+                                    <img src="../assets/images/right-icon.svg" alt="check icon" />
+                                    <p>
                                         Advanced Cold Chain Management
                                     </p>
                                 </li>
-
-                                <li class="flex items-start gap-[12px]">
-                                    <img src="../assets/images/right-icon.svg" alt="check icon"
-                                        class="w-[32px] h-[32px]" />
-                                    <p
-                                        class="text-[20px] leading-[25px] font-semibold text-[#000000] items-center capitalize">
-                                        Smart Packaging & Repacking Solutions
+                                <li>
+                                    <img src="../assets/images/right-icon.svg" alt="check icon" />
+                                    <p>
+                                        Smart Packaging &amp; Repacking Solutions
                                     </p>
                                 </li>
-
-                                <li class="flex items-start gap-[12px]">
-                                    <img src="../assets/images/right-icon.svg" alt="check icon"
-                                        class="w-[32px] h-[32px]" />
-                                    <p
-                                        class="text-[20px] leading-[25px] font-semibold text-[#000000] items-center capitalize">
+                                <li>
+                                    <img src="../assets/images/right-icon.svg" alt="check icon" />
+                                    <p>
                                         Technology-Driven Warehouse Operations
                                     </p>
                                 </li>
-
                             </ul>
-
-
                         </div>
-
                         <!-- Button: width 144, height 54, radius 100, margin-top 50 -->
-                        <button class="mt-[50px] inline-flex w-[144px] h-[54px] items-center justify-center
-                   rounded-[100px] bg-[#D82626] text-[14px] font-semibold text-white
-                   hover:bg-[#bf1f1f] transition-colors">
+                        <button class="about-main-button">
                             Learn More
                         </button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ================= MAP ================= -->
+        <section class="map-main">
+            <!-- Main container: 1920 x 996 -->
+            <div class="map-wrape">
+                <div class="map-sub-title">
+                    <div class="flex items-center gap-6 mb-4">
+                        <img src="../assets/images/white-truck.svg" alt="truck" />
+                        <p
+                            class="font-onest font-medium text-[14px] leading-[18px] tracking-[1px] uppercase text-white">
+                            Connecting the nation efficiently
+                        </p>
+                    </div>
+                    <h2 class="font-plusJakarta font-bold text-[44px] leading-[55px] text-white capitalize">
+                        Our Strong Distribution Network Across India
+                    </h2>
+                </div>
+                <!-- CENTER: Map -->
+                <div class="center-map">
+                    <img src="../assets/images/Map.png" alt="Distribution map" class="w-full h-full object-contain" />
+                </div>
+
+                <!-- RIGHT TOP: Short description -->
+                <div class="short-description">
+                    <p class="font-Onest font-normal text-[18px] leading-[34px] text-white capitalize">
+                        Driven by technology and trust, our network continues to expand, bridging
+                        distances and building lasting business relationships nationwide.
+                    </p>
+                </div>
+
+                <!-- RIGHT BOTTOM: Long description -->
+                <div class="long-description">
+                    <p class="font-Onest font-normal text-[18px] leading-[34px] text-white capitalize">
+                        Distribution is one of the four elements of marketing mix. Kataria
+                        Enterprise involved in the process of making a product available to the
+                        large population network. Kataria Enterprise having state-of-art
+                        distribution network management system to deliver, product placement and
+                        product promotion. Kataria Enterprise have made product distribution
+                        network in India's 5 major state covering 7000 villages, 400 cities, 70
+                        mega mall and over 12 crore consumers.
+                    </p>
+                </div>
+
+                <!-- BOTTOM LEFT: Stats group (5+ / 7000+ / 400+) -->
+                <div id="distribution-stats" class="stats-group">
+                    <!-- Stat 1 -->
+                    <div class="stats-flex">
+                        <span class="font-plusJakarta font-bold text-[40px] leading-[48px] text-white">
+                            <span class="counter" data-target="5">0</span>+
+                        </span>
+                        <span class="font-onest font-medium text-[14px] leading-[18px] text-white/90">
+                            State Covering
+                        </span>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stats-flex">
+                        <span class="font-plusJakarta font-bold text-[40px] leading-[48px] text-white">
+                            <span class="counter" data-target="7000">0</span>+
+                        </span>
+                        <span class="font-onest font-medium text-[14px] leading-[18px] text-white/90">
+                            Villages
+                        </span>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stats-flex">
+                        <span class="font-plusJakarta font-bold text-[40px] leading-[48px] text-white">
+                            <span class="counter" data-target="400">0</span>+
+                        </span>
+                        <span class="font-onest font-medium text-[14px] leading-[18px] text-white/90">
+                            Cities
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= HISTORY ================= -->
+        <section id="history-section" class="history-section-main">
+            <div class="history-top-flex">
+                <div class="flex items-center gap-12">
+                    <img src="../assets/images/black-truck.svg" alt="" class="w-[22px] h-[22px]" />
+                    <p class="sub-title-history">Our History</p>
+                </div>
+                <h2 class="font-plus font-bold text-[44px] leading-[55px] text-black">
+                    The Story Behind Our Growth
+                </h2>
+                <div class="relative mt-[12px] year-tabs-container">
+                    <div class="absolute top-[6px] w-full h-[2px] bg-[#D82626]"></div>
+                    <span id="activeDot" class="absolute top-0 w-[13px] h-[13px] bg-[#D82626] rounded-full transition-all duration-300 ease-in-out"></span>
+                    <div id="yearWrapper" class="flex pl-[80px] text-[40px] top-[4px] gap-[140px] relative">
+                        <button class="year-tab text-[#8D8D8D] active text-[#D82626] font-plus" data-target="year-1989">1989</button>
+                        <button class="year-tab text-[#8D8D8D] cursor-pointer font-plus" data-target="year-2002">2002</button>
+                        <button class="year-tab text-[#8D8D8D] cursor-pointer font-plus" data-target="year-2010">2010</button>
+                        <button class="year-tab text-[#8D8D8D] cursor-pointer font-plus" data-target="year-2016">2016</button>
+                        <button class="year-tab text-[#8D8D8D] cursor-pointer font-plus" data-target="year-2024">2024</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- YEAR CONTENT CONTAINER -->
+            <div class="w-[1593px] h-[722px] relative">
+
+                <!-- 1989 -->
+                <div id="year-1989" class="year-content flex gap-[24px] absolute inset-0">
+                    <div class="absolute left-0 top-0 w-[1205px] h-[722px] rounded-[16px] overflow-hidden">
+                        <img src="../assets/images/year-slider.png" class="object-cover" />
+                    </div>
+                    <div class="absolute left-[924px] top-[51px] w-[669px] h-[621px] flex flex-col items-start p-[50px] gap-[10px] bg-white rounded-[24px] shadow-[4.9464px_4.9464px_4.9464px_rgba(0,0,0,0.1)]">
+                        <h3 class="font-plus font-bold text-[30px] leading-[30px] mb-[15px]">The Beginning Of A Vision </h3>
+                        <p>The story of Kataria Enterprise began in 1989, when a determined entrepreneur, Mr.
+                            Vallabhbhai Kataria, laid the foundation of what would become one of India’s most reliable
+                            names in marketing, supply chain, and distribution management. Starting from humble
+                            beginnings in a small town in Gujarat, Mr. Vallabhbhai envisioned an enterprise that would
+                            bridge the gap between brands and markets bringing products efficiently, safely, and swiftly
+                            to every part of the country. </p>
+                        <p>At the time, logistics and distribution in India were fragmented and unorganized. Mr.
+                            Kataria’s vision went beyond transportation he dreamt of creating a structured and
+                            trustworthy distribution network that could transform how goods reached customers. With just
+                            a handful of vehicles and a small, dedicated team, he began building operations centered
+                            around the values of trust, reliability, and customer-first service.</p>
+                        <p>This was not just the beginning of a business it was the beginning of a philosophy. A belief
+                            that excellence, no matter how small the start, can grow into something truly
+                            transformational.</p>
+                    </div>
+                </div>
+
+                <!-- 2002 -->
+                <div id="year-2002" class="year-content flex gap-[24px] absolute inset-0">
+                    <div class="absolute left-0 top-0 w-[1205px] h-[722px] rounded-[16px] overflow-hidden">
+                        <img src="../assets/images/year-slider.png" class="object-cover" />
+                    </div>
+                    <div class="absolute left-[924px] top-[51px] w-[669px] h-[621px]
+                    flex flex-col items-start p-[50px] gap-[10px]
+                    bg-white rounded-[24px]
+                    shadow-[4.9464px_4.9464px_4.9464px_rgba(0,0,0,0.1)]">
+                        <h3 class="font-plus font-bold text-[30px] leading-[30px] mb-[15px]">The Beginning Of A Vision
+                        </h3>
+                        <p>The story of Kataria Enterprise began in 1989, when a determined entrepreneur, Mr.
+                            Vallabhbhai Kataria, laid the foundation of what would become one of India’s most reliable
+                            names in marketing, supply chain, and distribution management. Starting from humble
+                            beginnings in a small town in Gujarat, Mr. Vallabhbhai envisioned an enterprise that would
+                            bridge the gap between brands and markets bringing products efficiently, safely, and swiftly
+                            to every part of the country. </p>
+                        <p>At the time, logistics and distribution in India were fragmented and unorganized. Mr.
+                            Kataria’s vision went beyond transportation he dreamt of creating a structured and
+                            trustworthy distribution network that could transform how goods reached customers. With just
+                            a handful of vehicles and a small, dedicated team, he began building operations centered
+                            around the values of trust, reliability, and customer-first service.</p>
+                        <p>This was not just the beginning of a business it was the beginning of a philosophy. A belief
+                            that excellence, no matter how small the start, can grow into something truly
+                            transformational.</p>
+                    </div>
+                </div>
+
+                <!-- 2010 -->
+                <div id="year-2010" class="year-content flex gap-[24px] absolute inset-0">
+                    <div class="absolute left-0 top-0 w-[1205px] h-[722px] rounded-[16px] overflow-hidden">
+                        <img src="../assets/images/year-slider.png" class="object-cover" />
+                    </div>
+                    <div class="absolute left-[924px] top-[51px] w-[669px] h-[621px]
+                    flex flex-col items-start p-[50px] gap-[10px]
+                    bg-white rounded-[24px]
+                    shadow-[4.9464px_4.9464px_4.9464px_rgba(0,0,0,0.1)]">
+                        <h3 class="font-plus font-bold text-[30px] leading-[30px] mb-[15px]">The Beginning Of A Vision
+                        </h3>
+                        <p>The story of Kataria Enterprise began in 1989, when a determined entrepreneur, Mr.
+                            Vallabhbhai Kataria, laid the foundation of what would become one of India’s most reliable
+                            names in marketing, supply chain, and distribution management. Starting from humble
+                            beginnings in a small town in Gujarat, Mr. Vallabhbhai envisioned an enterprise that would
+                            bridge the gap between brands and markets bringing products efficiently, safely, and swiftly
+                            to every part of the country. </p>
+                        <p>At the time, logistics and distribution in India were fragmented and unorganized. Mr.
+                            Kataria’s vision went beyond transportation he dreamt of creating a structured and
+                            trustworthy distribution network that could transform how goods reached customers. With just
+                            a handful of vehicles and a small, dedicated team, he began building operations centered
+                            around the values of trust, reliability, and customer-first service.</p>
+                        <p>This was not just the beginning of a business it was the beginning of a philosophy. A belief
+                            that excellence, no matter how small the start, can grow into something truly
+                            transformational.</p>
+                    </div>
+                </div>
+
+                <!-- 2016 -->
+                <div id="year-2016" class="year-content flex gap-[24px] absolute inset-0">
+                    <div class="absolute left-0 top-0 w-[1205px] h-[722px] rounded-[16px] overflow-hidden">
+                        <img src="../assets/images/year-slider.png" class="object-cover" />
+                    </div>
+                    <div class="absolute left-[924px] top-[51px] w-[669px] h-[621px]
+                    flex flex-col items-start p-[50px] gap-[10px]
+                    bg-white rounded-[24px]
+                    shadow-[4.9464px_4.9464px_4.9464px_rgba(0,0,0,0.1)]">
+                        <h3 class="font-plus font-bold text-[30px] leading-[30px] mb-[15px]">The Beginning Of A Vision
+                        </h3>
+                        <p>The story of Kataria Enterprise began in 1989, when a determined entrepreneur, Mr.
+                            Vallabhbhai Kataria, laid the foundation of what would become one of India’s most reliable
+                            names in marketing, supply chain, and distribution management. Starting from humble
+                            beginnings in a small town in Gujarat, Mr. Vallabhbhai envisioned an enterprise that would
+                            bridge the gap between brands and markets bringing products efficiently, safely, and swiftly
+                            to every part of the country. </p>
+                        <p>At the time, logistics and distribution in India were fragmented and unorganized. Mr.
+                            Kataria’s vision went beyond transportation he dreamt of creating a structured and
+                            trustworthy distribution network that could transform how goods reached customers. With just
+                            a handful of vehicles and a small, dedicated team, he began building operations centered
+                            around the values of trust, reliability, and customer-first service.</p>
+                        <p>This was not just the beginning of a business it was the beginning of a philosophy. A belief
+                            that excellence, no matter how small the start, can grow into something truly
+                            transformational.</p>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div id="year-2024" class="year-content flex gap-[24px] absolute inset-0">
+                    <div class="absolute left-0 top-0 w-[1205px] h-[722px] rounded-[16px] overflow-hidden">
+                        <img src="../assets/images/year-slider.png" class="object-cover" />
+                    </div>
+                    <div class="absolute left-[924px] top-[51px] w-[669px] h-[621px]
+                    flex flex-col items-start p-[50px] gap-[10px]
+                    bg-white rounded-[24px]
+                    shadow-[4.9464px_4.9464px_4.9464px_rgba(0,0,0,0.1)]">
+                        <h3 class="font-plus font-bold text-[30px] leading-[30px] mb-[15px]">The Beginning Of A Vision
+                        </h3>
+                        <p>The story of Kataria Enterprise began in 1989, when a determined entrepreneur, Mr.
+                            Vallabhbhai Kataria, laid the foundation of what would become one of India’s most reliable
+                            names in marketing, supply chain, and distribution management. Starting from humble
+                            beginnings in a small town in Gujarat, Mr. Vallabhbhai envisioned an enterprise that would
+                            bridge the gap between brands and markets bringing products efficiently, safely, and swiftly
+                            to every part of the country. </p>
+                        <p>At the time, logistics and distribution in India were fragmented and unorganized. Mr.
+                            Kataria’s vision went beyond transportation he dreamt of creating a structured and
+                            trustworthy distribution network that could transform how goods reached customers. With just
+                            a handful of vehicles and a small, dedicated team, he began building operations centered
+                            around the values of trust, reliability, and customer-first service.</p>
+                        <p>This was not just the beginning of a business it was the beginning of a philosophy. A belief
+                            that excellence, no matter how small the start, can grow into something truly
+                            transformational.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
 
 
@@ -488,6 +735,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="../assets/js/script.js"></script>
+
 
 </body>
 
