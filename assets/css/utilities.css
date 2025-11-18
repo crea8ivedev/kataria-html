@@ -1,4 +1,5 @@
 
+
 :root{
     --left-img: url('../assets/images/truckleft.png');
     --right-img: url('../assets/images/truckright.png');
@@ -174,8 +175,6 @@
       --swiper-slides-per-view: 2 !important;
     }
   }
-
-
 
 
 
