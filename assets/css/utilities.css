@@ -119,31 +119,61 @@
   }
 
 
-.service-slider-main .swiper-wrapper {
-    transition-timing-function: linear !important
+/* ===========================
+     TESTIMONIAL CARD STYLING
+  ============================ */
+
+  .testimonial-card {
+    @apply flex flex-col gap-[10px] 
+           rounded-[40px] 
+           bg-[#0055A4] 
+           px-[51px] py-[40px]
+           text-white;
+  }
+
+  .testimonial-icon {
+    @apply w-[48px] h-[48px];
+  }
+
+  .testimonial-text {
+    @apply text-[16px] leading-[28px] font-normal;
+  }
+
+  .testimonial-name {
+    @apply text-[20px] leading-[24px] font-semibold;
+  }
+
+  .testimonial-position {
+    @apply text-[16px] leading-[28px] font-normal opacity-80;
+  }
+
+
+  /* ===========================
+        SWIPER BASE STYLES
+  ============================ */
+
+  .swiper-wrapper-custom {
+    @apply w-full h-full;
+  }
+
+  .swiper-slide-custom {
+    @apply flex items-start justify-start;
+  }
+
+
+  /* Mobile: 1 slide */
+  @media (max-width: 768px) {
+    .swiper-mobile-1 {
+      --swiper-slides-per-view: 1 !important;
     }
+  }
 
-.service-slider-main{
-  @apply w-full bg-[#0b3a75] py-[15px]
-}
-
-.slide-rep{
-  @apply flex items-center px-[28px] border-r border-white/30
-}₹
-
-.leading-none{
-  @apply font-body;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  color: #FFFFFF;
-}
-
-
-
-
-
+  /* Tablet: 2 slides */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .swiper-tablet-2 {
+      --swiper-slides-per-view: 2 !important;
+    }
+  }
 
 
 
