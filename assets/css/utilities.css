@@ -84,11 +84,11 @@
 }
 
 .banner-truck-img-left{
-  @apply hidden md:block absolute left-0 bottom-0 w-[420px] object-contain opacity-15
+  @apply hidden md:block absolute left-0 bottom-0 w-543 h-393 object-contain opacity-15
 }
 
 .banner-truck-img-right{
-  @apply hidden md:block absolute right-0 bottom-0 w-[420px] object-contain opacity-15
+  @apply hidden md:block absolute right-0 bottom-0 w-543 h-393 object-contain opacity-15
 }
 
 .banner-content{
@@ -104,10 +104,10 @@
   @apply inline-block text-[110px] leading-[1.1] font-bold
   bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
   text-transparent bg-clip-text
-  [@media(min-width:374px)]:text-[46px]
-  [@media(min-width:576px)]:text-[70px]
-  [@media(min-width:1024px)]:text-[90px]
-  [@media(min-width:1440px)]:text-[110px]
+  [@media(max-width:374px)]:text-[46px]
+  [@media(max-width:576px)]:text-[70px]
+  [@media(max-width:1024px)]:text-[90px]
+  [@media(max-width:1440px)]:text-[110px]
 }
 
 .banner-content-one p{
@@ -139,6 +139,8 @@
   line-height: 26px;
   color: #FFFFFF;
 }
+
+
 
 
 
