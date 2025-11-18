@@ -1,0 +1,49 @@
+/* Hit area: allow vertical scroll, but we'll block horizontal in JS */
+[data-testimonial-hitarea] {
+  touch-action: pan-y;
+}
+
+/* Dots */
+.testimonial-dot {
+  width: var(--spacing-16);   /* 16px */
+  height: var(--spacing-16);  /* 16px */
+  border-radius: var(--radius-8); /* 8px */
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #d82626;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.testimonial-dot--active {
+  background-color: #d82626 !important;
+  border-color: #d82626 !important;
+}
+
+/* --- Arrows & dots visibility logic --- */
+
+/* SMALL SCREENS < 768px  -> arrows visible, dots hidden */
+@media (max-width: 767px) {
+  .testimonial-arrow {
+    display: inline-flex !important;
+    margin-top: 8px;
+  }
+  .testimonial-dots {
+    display: none !important;
+  }
+}
+
+/* LARGE SCREENS ≥ 768px  -> dots visible, arrows hidden */
+@media (min-width: 768px) {
+  .testimonial-arrow {
+    display: none !important;
+  }
+  .testimonial-dots {
+    display: inline-flex !important;
+  }
+}
+

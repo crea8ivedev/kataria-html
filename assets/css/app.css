@@ -4,6 +4,7 @@
 @import "./components.css";
 @import "./utilities.css";
 @import "./layout.css";
+@import "./testimonial.css";
 
 @layer base, components, utilities;
 
