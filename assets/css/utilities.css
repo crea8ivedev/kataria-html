@@ -292,11 +292,11 @@
 }
 
 .short-description{
-  @apply absolute left-[1234px] top-[83px] w-[566px] h-[102px] flex items-center
+  @apply absolute right-[111px] top-[83px] w-[546px] h-[102px] flex items-center
 }
 
 .long-description{
-  @apply absolute left-[1234px] top-[674px] w-[563px] h-[272px] flex items-center
+  @apply absolute right-[111px] top-[674px] w-[546px] h-[272px] flex items-center
 }
 
 .stats-group{
@@ -409,4 +409,79 @@
 
 .sub-title-history{
   @apply font-body font-medium text-[14px] leading-[18px] uppercase tracking-[1px] text-black
+}
+
+
+/* Grid section */
+
+.grid-main {
+  @apply w-full bg-[linear-gradient(180deg,#D82626_0%,#0055A4_39%,#ffffff_68%)];
+}
+
+.grid-main-wrapper{
+  @apply max-w-[1474px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-80 min-h-[546px] flex flex-col
+}
+
+.top-row-content{
+  @apply flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8
+}
+
+.grid-content{
+  @apply max-w-[786px] space-y-4
+}
+
+.grid-icon-main{
+  @apply flex items-center gap-6
+}
+
+.grid-icon{
+  @apply w-20 h-20 flex items-center justify-center
+}
+
+.grid-icon img{
+  @apply w-full h-full object-contain
+}
+
+.grid-icon-main > p{
+  @apply text-[14px] leading-[18px] font-medium tracking-[0.14em] uppercase text-white font-body
+}
+
+.grid-content h2{
+  @apply font-heading font-bold text-white text-[28px] sm:text-[34px] lg:text-[44px] leading-[1.2] lg:leading-[55px] capitalize
+}
+
+.grid-bth{
+  @apply flex lg:items-start lg:pt-35
+}
+
+.grid-bth a{
+  @apply w-[144px] h-[54px] flex justify-center items-center rounded-full bg-white text-[#D82626] text-[14px] font-semibold shadow-sm
+}
+
+.grid-card-main{
+  @apply mt-10 lg:mt-70 flex-1
+}
+
+.grid-card-wrape{
+  @apply w-full flex flex-col lg:flex-row gap-[30px] lg:h-[438px]
+}
+
+.grid-card{
+  @apply flex-1 bg-white rounded-[24px] shadow-[0_24px_60px_rgba(0,0,0,0.08)] px-6 sm:px-8 pt-29 pb-8 flex flex-col
+}
+
+.grid-card h3{
+  @apply font-heading font-bold text-[22px] leading-[28px] text-[#D82626] flex justify-center pt-20
+}
+
+.grid-line{
+  @apply w-[432px] border-b border-[#DFDFDF] my-4 pt-30 mx-auto
+}
+
+.grid-card-list{
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 w-[432px] text-[18px] leading-[28px] text-[#8E8E8E] font-default pt-30 font-normal text-left mx-auto
+}
+
+.grid-card-list ul{
+  @apply space-y-2 list-disc marker:text-[#0055A4] pl-20 text-[18px] leading-[28px] font-default text-[#8E8E8E]
 }

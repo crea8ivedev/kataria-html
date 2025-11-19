@@ -1,0 +1,18 @@
+.container-fluid {
+    @apply mx-auto w-full px-80 max-1512:px-40 max-767:px-30 min-1920:max-w-[1920px];
+  }
+  
+  .container-fluid-sm {
+    @apply mx-auto w-full px-55 max-1440:px-30 max-767:px-30 min-1920:max-w-[1920px];
+  }
+  
+  .container-fluid-lg {
+    @apply mx-auto w-full px-100 max-1440:px-60 max-767:px-30 min-1920:max-w-[1920px];
+  }
+  .container-fluid-xl {
+    @apply mx-auto w-full px-140 max-1440:px-60 max-767:px-30 min-1920:max-w-[1920px];
+  }
+  
+  .container-xsm {
+    @apply mx-auto w-full px-30 min-1920:max-w-[1920px];
+  }
