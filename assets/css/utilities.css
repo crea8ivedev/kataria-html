@@ -408,5 +408,5 @@
 }
 
 .sub-title-history{
-  @apply font-onest font-medium text-[14px] leading-[18px] uppercase tracking-[1px] text-black
+  @apply font-body font-medium text-[14px] leading-[18px] uppercase tracking-[1px] text-black
 }
