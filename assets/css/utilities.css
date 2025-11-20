@@ -79,8 +79,13 @@
     width: auto;
   }
 
+
+/* ===========================
+     HERO BANNER STYLING
+   =========================== */
+
 .hero-banner-main{
-  @apply relative w-full min-h-[90vh] flex justify-center overflow-hidden bg-white
+  @apply relative w-full max-w-[1920px] min-h-[90vh] flex overflow-hidden bg-white
 }
 
 .banner-truck-img-left{
@@ -92,7 +97,7 @@
 }
 
 .banner-content{
-  @apply relative z-10 max-w-[1500px] mx-auto px-6 pt-20 text-center md:w-8/12 lg:w-6/12
+  @apply relative z-10 mx-auto px-6 pt-20 text-center
 }
 
 .banner-content-pre{
@@ -266,6 +271,10 @@
 
 .about-main-button{
   @apply mt-[50px] inline-flex w-[144px] h-[54px] items-center justify-center rounded-[100px] bg-[#D82626] text-[14px] font-semibold text-white hover:bg-[#bf1f1f] transition-colors
+}
+
+.about-main{
+  @apply relative w-full max-w-[1920px] mx-auto
 }
 
 
