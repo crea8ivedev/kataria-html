@@ -37,28 +37,27 @@
                     </h2>
                 </div>
 
-                <!-- 4 CARDS (RESPONSIVE GRID) -->
-                <!-- 1 col mobile, 2 col tablet, 4 col from 1024px (lg) upward -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-30 items-end">
+                <!-- CARDS -->
+                <!-- 1 col mobile, 2 col tablet, 3 col from 1024px, 4 col from 2xl -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-20 xl:gap-30">
 
                     <!-- CARD 1 -->
-                    <article class="flex flex-col items-center gap-16 w-full max-w-[398px] mx-auto lg:mx-0">
-                        <!-- IMAGE BLOCK -->
+                    <article
+                        class="flex flex-col items-center gap-16 w-full max-w-[360px] mx-auto lg:max-w-none lg:mx-0">
                         <div class="group relative w-full rounded-[10px] overflow-hidden">
-                            <div class="relative w-full h-[360px] sm:h-[460px] lg:h-[560px]">
+                            <!-- smaller & less tall on < lg -->
+                            <div class="relative w-full aspect-[4/5] lg:aspect-[5/7]">
                                 <img src="../assets/images/balaji.png" alt="Balaji"
                                     class="w-full h-full object-cover" />
 
-                                <!-- BLACK CIRCLE (hover) -->
                                 <button type="button"
                                     class="hidden group-hover:flex absolute top-20 right-20 w-[50px] h-[50px] p-[1px] justify-center items-center transition-transform duration-200 group-active:scale-90">
                                     <span class="w-full h-full rounded-full bg-black"></span>
                                 </button>
 
-                                <!-- RED CAPTION OVERLAY -->
                                 <div class="absolute inset-x-0 bottom-0 px-20 sm:px-30 py-16 sm:py-20 bg-[rgba(216,38,38,0.80)] text-white
-                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                     transition-all duration-300">
+                                            translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                                            transition-all duration-300">
                                     <p class="text-14 sm:text-16 leading-[22px] sm:leading-[26px]">
                                         Kataria constantly trying to find ways to improve performance
                                         and warehouse operations is area where supply chain managers
@@ -68,7 +67,6 @@
                             </div>
                         </div>
 
-                        <!-- BOTTOM LOGO + NAME (transparent bg so gradient shows) -->
                         <div class="flex items-center gap-10 px-16 sm:px-20">
                             <img src="../assets/images/balaji_logo.png" alt="Balaji Logo"
                                 class="w-[93px] h-[72px] object-contain" />
@@ -80,9 +78,10 @@
                     </article>
 
                     <!-- CARD 2 -->
-                    <article class="flex flex-col items-center gap-16 w-full max-w-[398px] mx-auto lg:mx-0">
+                    <article
+                        class="flex flex-col items-center gap-16 w-full max-w-[360px] mx-auto lg:max-w-none lg:mx-0">
                         <div class="group relative w-full rounded-[10px] overflow-hidden">
-                            <div class="relative w-full h-[360px] sm:h-[460px] lg:h-[560px]">
+                            <div class="relative w-full aspect-[4/5] lg:aspect-[5/7]">
                                 <img src="../assets/images/cocacola.png" alt="Coca Cola"
                                     class="w-full h-full object-cover" />
 
@@ -92,8 +91,8 @@
                                 </button>
 
                                 <div class="absolute inset-x-0 bottom-0 px-20 sm:px-30 py-16 sm:py-20 bg-[rgba(216,38,38,0.80)] text-white
-                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                     transition-all duration-300">
+                                        translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                                        transition-all duration-300">
                                     <p class="text-14 sm:text-16 leading-[22px] sm:leading-[26px]">
                                         Kataria constantly trying to find ways to improve performance
                                         and warehouse operations is area where supply chain managers
@@ -114,9 +113,10 @@
                     </article>
 
                     <!-- CARD 3 -->
-                    <article class="flex flex-col items-center gap-16 w-full max-w-[398px] mx-auto lg:mx-0">
+                    <article
+                        class="flex flex-col items-center gap-16 w-full max-w-[360px] mx-auto lg:max-w-none lg:mx-0">
                         <div class="group relative w-full rounded-[10px] overflow-hidden">
-                            <div class="relative w-full h-[360px] sm:h-[460px] lg:h-[560px]">
+                            <div class="relative w-full aspect-[4/5] lg:aspect-[5/7]">
                                 <img src="../assets/images/vadilal.png" alt="Vadilal Ice Cream"
                                     class="w-full h-full object-cover" />
 
@@ -126,8 +126,8 @@
                                 </button>
 
                                 <div class="absolute inset-x-0 bottom-0 px-20 sm:px-30 py-16 sm:py-20 bg-[rgba(216,38,38,0.80)] text-white
-                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                     transition-all duration-300">
+                                        translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                                        transition-all duration-300">
                                     <p class="text-14 sm:text-16 leading-[22px] sm:leading-[26px]">
                                         Kataria constantly trying to find ways to improve performance
                                         and warehouse operations is area where supply chain managers
@@ -147,10 +147,14 @@
                         </div>
                     </article>
 
+                    <!-- PLACEHOLDER: visible only on lg, hidden on smaller & 2xl -->
+                    <div class="hidden lg:block 2xl:hidden"></div>
+
                     <!-- CARD 4 -->
-                    <article class="flex flex-col items-center gap-16 w-full max-w-[398px] mx-auto lg:mx-0">
+                    <article
+                        class="flex flex-col items-center gap-16 w-full max-w-[360px] mx-auto lg:max-w-none lg:mx-0">
                         <div class="group relative w-full rounded-[10px] overflow-hidden">
-                            <div class="relative w-full h-[360px] sm:h-[460px] lg:h-[560px]">
+                            <div class="relative w-full aspect-[4/5] lg:aspect-[5/7]">
                                 <img src="../assets/images/accord.png" alt="Accord Ceramics"
                                     class="w-full h-full object-cover" />
 
@@ -160,8 +164,8 @@
                                 </button>
 
                                 <div class="absolute inset-x-0 bottom-0 px-20 sm:px-30 py-16 sm:py-20 bg-[rgba(216,38,38,0.80)] text-white
-                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
-                     transition-all duration-300">
+                                        translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                                        transition-all duration-300">
                                     <p class="text-14 sm:text-16 leading-[22px] sm:leading-[26px]">
                                         Kataria constantly trying to find ways to improve performance
                                         and warehouse operations is area where supply chain managers
@@ -184,7 +188,6 @@
                 </div>
             </div>
         </section>
-
 
 
         <section class="testimonial-section my-80 overflow-visible">
@@ -431,17 +434,14 @@
                 </div>
             </div>
 
-            <!-- MIDDLE SECTION
-            <div class="max-w-[1395px] mx-auto 
-                        px-20 sm:px-40  md:px-60 lg:px-80 xl:px-20 2xl:px-20
-                        flex flex-col lg:flex-row gap-352 xl:gap-200 lg:gap-80 md:gap-40 sm:gap-40 mb-60"> -->
+            <!-- MIDDLE SECTION -->
             <div
-                class="max-w-[1395px] mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 flex flex-col lg:flex-row gap-20 sm:gap-40 md:gap-80 lg:gap-[100px] xl:gap-[300px] 2xl:gap-[352px] mb-60">
+                class="max-w-1395 mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 flex flex-col lg:flex-row gap-20 sm:gap-40 md:gap-80 lg:gap-[100px] xl:gap-[300px] 2xl:gap-[352px] mb-60">
                 <!-- LEFT SIDE -->
-                <div class="flex flex-col gap-30 max-w-320">
+                <div class="flex flex-col gap-30 max-w-xs">
                     <img src="../assets/images/footer-logo.svg" class="w-295 h-70 mb-6" alt="" />
 
-                    <p class="max-w-sm text-[15px] leading-relaxed">
+                    <p class="max-w-sm text-15 leading-relaxed">
                         Delivering excellence in distribution, logistics, and product
                         supply across India. Building trust through quality, speed, and
                         reliability.
@@ -484,10 +484,10 @@
                 </div>
 
                 <!-- RIGHT SIDE -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-90 md:gap-45 sm:gap-15 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-25 md:gap-45 sm:gap-15 text-left">
                     <div class="flex flex-col gap-20">
                         <h3 class="font-bold text-lg mb-4">Quick Link</h3>
-                        <ul class="text-[15px] flex flex-col gap-20">
+                        <ul class="text-15 flex flex-col gap-15 md:gap-20 lg:gap:20">
                             <li>
                                 <a href="/about.html" class="hover:text-blue-500">About Us</a>
                             </li>
@@ -505,7 +505,7 @@
 
                     <div class="flex flex-col gap-20">
                         <h3 class="font-bold text-lg mb-4">Services</h3>
-                        <ul class="text-[15px] flex flex-col gap-20">
+                        <ul class="text-15 flex flex-col gap-15 md:gap-20 lg:gap:20">
                             <li>
                                 <a href="#" class="hover:text-blue-500">FMCG Distribution</a>
                             </li>
@@ -526,7 +526,7 @@
 
                     <div class="flex flex-col gap-20">
                         <h3 class="font-bold text-lg mb-4">Contact</h3>
-                        <ul class="text-[15px] leading-relaxed flex flex-col gap-20 md:min-w-">
+                        <ul class="text-15 leading-relaxed flex flex-col gap-15 md:gap-20 lg:gap:20">
                             <li>
                                 <a href="tel:+919876543210" class="hover:text-blue-500">+91 98765 43210</a>
                             </li>
@@ -549,7 +549,7 @@
 
             <!-- BOTTOM BAR -->
             <div
-                class="border-t border-[#222] max-w-[1395px] mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 py-25">
+                class="border-t border-[#222] max-w-1395 mx-auto px-20 sm:px-40 md:px-60 lg:px-80 xl:px-20 2xl:px-20 py-25">
                 <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-20">
                     <p>All Right Reserved © 2025</p>
                     <a href="/privacy.html" class="hover:text-blue-500">
