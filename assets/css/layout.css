@@ -537,12 +537,49 @@
 
 /* New Header */
 
+/* base styles (no responsive display here) */
+.header-nev{
+  @apply items-center gap-37 font-semibold text-17;
+}
+
+.header-button{
+  @apply items-center gap-0 rounded-r-10 rounded-l-10 overflow-hidden;
+}
+
+/* hamburger hidden by default */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* DESKTOP: ≥ 1200px  -> show nav + buttons, hide burger */
+@media (min-width: 1200px) {
+  .header-nev,
+  .header-button {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+/* MOBILE/TABLET: ≤ 1199px -> hide nav + buttons, show burger */
+@media (max-width: 1199px) {
+  .header-nev,
+  .header-button {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+}
+
+
 .header-kat {
   @apply w-full bg-white shadow-md border-b border-gray-200 rounded-br-30 rounded-bl-30 sticky top-0 z-50;
 }
 
 .announcement-bar-kat {
-  @apply w-full bg-[#002060] overflow-hidden py-2;
+  @apply w-full bg-[#002060] overflow-hidden py-13;
 }
 
 .header-main {
@@ -555,7 +592,7 @@
 
 /* Desktop nav – centered, flexible */
 .header-nev {
-  @apply hidden lg:flex flex-1 items-center justify-center gap-10 font-semibold text-17;
+  @apply hidden lg:flex flex-1 items-center justify-center gap-37 font-semibold text-17;
 }
 
 /* Desktop buttons – on right, no shrink */
