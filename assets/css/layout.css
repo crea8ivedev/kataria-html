@@ -543,7 +543,7 @@
 }
 
 .header-button{
-  @apply items-center gap-0 rounded-r-10 rounded-l-10 overflow-hidden;
+  @apply flex items-center gap-0 rounded-r-10 rounded-l-10 overflow-hidden;
 }
 
 /* hamburger hidden by default */
@@ -552,7 +552,7 @@
 }
 
 /* DESKTOP: ≥ 1200px  -> show nav + buttons, hide burger */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .header-nev,
   .header-button {
     display: flex;
@@ -560,7 +560,7 @@
   .mobile-menu-btn {
     display: none !important;
   }
-}
+} */
 
 /* MOBILE/TABLET: ≤ 1199px -> hide nav + buttons, show burger */
 @media (max-width: 1199px) {
