@@ -81,51 +81,72 @@
 
 
 /* ===========================
-     HERO BANNER STYLING
+   HERO BANNER STYLING
    =========================== */
 
-.hero-banner-main{
-  @apply relative w-full max-w-[1920px] min-h-[90vh] flex overflow-hidden bg-white
-}
-
-.banner-truck-img-left{
-  @apply hidden md:block absolute left-0 bottom-0 w-543 h-393 object-contain opacity-15
-}
-
-.banner-truck-img-right{
-  @apply hidden md:block absolute right-0 bottom-0 w-543 h-393 object-contain opacity-15
-}
-
-.banner-content{
-  @apply relative z-10 mx-auto px-6 pt-20 text-center
-}
-
-.banner-content-pre{
-  @apply mt-[60px] sm:mt-[80px] lg:mt-[113px] mb-[15px] sm:mb-[18px] lg:mb-[20px]
-  text-[35px] leading-[100%] font-medium text-center text-[#1A1A1A]
-}
-
-.banner-h1{
-  @apply inline-block text-[110px] leading-[1.1] font-bold
-  bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
-  text-transparent bg-clip-text
-  [@media(max-width:374px)]:text-[46px]
-  [@media(max-width:576px)]:text-[70px]
-  [@media(max-width:1024px)]:text-[90px]
-  [@media(max-width:1440px)]:text-[110px]
-}
-
-.banner-content-one p{
-  @apply text-[18px] leading-[28px] text-gray-400 mt-[28px] max-w-[811px] max-h-[84px] mx-auto text-center
-}
-
-.announcement-bar .swiper-wrapper {
-  transition-timing-function: linear !important
+   .hero-banner-main {
+    @apply relative w-full max-w-[1920px] min-h-[90vh] mx-auto
+    flex items-center justify-center overflow-hidden bg-white;
   }
+  
+  /* Truck images on left/right (desktop & tablet only) */
+.banner-truck-img-left {
+  @apply hidden absolute left-0 bottom-0 object-contain opacity-[0.15]
+  2xs:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
+}
 
-  .featureSwiper .swiper-wrapper {
-    transition-timing-function: linear !important
+.banner-truck-img-right {
+  @apply hidden absolute right-0 bottom-0 object-contain opacity-[0.15]
+  2xs:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
+}
+  
+  /* Main content wrapper */
+  .banner-content {
+    @apply relative z-10 mx-auto px-6 pt-20 text-center;
+  }
+  
+  /* "Welcome to" text */
+  .banner-content-pre {
+    @apply mt-[40px] sm:mt-[60px] lg:mt-[80px]
+    mb-[12px] sm:mb-[16px] lg:mb-[20px]
+    text-[18px] sm:text-[22px] lg:text-[26px]
+    leading-[100%] font-medium text-center text-[#1A1A1A];
+  }
+  
+  /* Main gradient heading */
+  .banner-h1 {
+    @apply inline-block
+    text-[42px] sm:text-[60px] md:text-[80px] lg:text-[96px] xl:text-[110px]
+    leading-[1.1] font-bold
+    bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
+    text-transparent bg-clip-text;
+  }
+  
+  /* Paragraphs */
+  .banner-content-one p {
+    @apply text-[16px] sm:text-[18px] leading-[28px] text-gray-400
+    mt-[20px] sm:mt-[24px] lg:mt-[28px]
+    max-w-[811px] mx-auto text-center;
+  }
+  
+  /* Optional: slightly tighter layout on very small phones */
+  @media (max-width: 400px) {
+    .banner-content {
+      @apply pt-16;
     }
+  }
+  
+  /* ===========================
+     SWIPER (UNCHANGED LOGIC)
+     =========================== */
+  
+  .announcement-bar .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+  
+  .featureSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
     
     
 
@@ -409,7 +430,7 @@
 /* History section */
 
 .history-section-main{
-  @apply w-[1680px] mx-auto mt-104 pb-104 flex flex-col gap-[80px]
+  @apply max-w-[1680px] mx-auto mt-104 pb-104 flex flex-col gap-[80px]
 }
 
 .history-top-flex{
