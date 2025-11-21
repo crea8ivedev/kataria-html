@@ -529,11 +529,11 @@ Testimonial section
        BRANDS SECTION WRAPPERS
      =========================== */
 
-  .testimonial-section-main {
+  .our-brands-section-main {
     @apply w-full bg-[linear-gradient(180deg,#D82626_0%,#0055A4_52.4%,rgba(0,85,164,0)_100%)];
   }
 
-  .testimonial-inner-wrapper {
+  .our-brands-inner-wrapper {
     @apply max-w-[1679px] mx-auto px-16 sm:px-24 lg:px-40
            py-40 sm:py-56 lg:py-80
            flex flex-col gap-32 sm:gap-40;
@@ -573,7 +573,7 @@ Testimonial section
   }
 
 @media (min-width: 1024px) and (max-width: 1535px) {
-  .testimonial-inner-wrapper .cards-container > :last-child:nth-child(3n + 1) {
+  .our-brands-inner-wrapper .cards-container > :last-child:nth-child(3n + 1) {
     grid-column: 2 / span 1; /* put it in the middle column */
   }
 }
