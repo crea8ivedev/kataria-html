@@ -52,7 +52,8 @@
             <div class="header-wrape">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 flex-shrink-0 p-20">
-                    <img src="../assets/images/header-logo.png" alt="Logo" class="h-[60px] w-auto">
+                    <img src="../assets/images/header-logo.png" alt="Logo"
+                        class="w-200 sm:w-240 md:w-240 lg:w-250 xl:w-295  " />
                 </a>
 
                 <!-- Navigation (Desktop) -->
@@ -118,35 +119,36 @@
             <a href="#" class="block py-20 border-b">Contact</a>
             <div class="px-6 pb-5 pt-5 text-[17px] font-medium">
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-            
+
                     <!-- Login Button -->
                     <a href="#"
-                       class="flex-1 w-full sm:w-auto py-7 text-center bg-[#D92727] text-white rounded-lg font-semibold shadow-md hover:bg-[#b82020] transition">
+                        class="flex-1 w-full sm:w-auto py-7 text-center bg-[#D92727] text-white rounded-lg font-semibold shadow-md hover:bg-[#b82020] transition">
                         Login
                     </a>
-            
+
                     <!-- Dealer / Marketing / Employee Button -->
-                    <div class="flex-1 w-full sm:w-auto py-7 text-center bg-[#004AAD] text-white rounded-lg font-semibold shadow-md hover:bg-[#003888] transition">
+                    <div
+                        class="flex-1 w-full sm:w-auto py-7 text-center bg-[#004AAD] text-white rounded-lg font-semibold shadow-md hover:bg-[#003888] transition">
                         <a href="#">Dealer</a>
                         <span>/</span>
                         <a href="#">Marketing</a>
                         <span>/</span>
                         <a href="#">Employee</a>
                     </div>
-            
+
                 </div>
             </div>
-            
-                
-            
-            
+
+
+
+
         </div>
     </header>
 
     <main class="mt-12">
         <!-- ================= HERO / BANNER ================= -->
         <section class="hero-banner-main">
-            <div class="container-fluid-lg">
+            <div class="container-fluid-lg m-auto h-full">
                 <img src="../assets/images/truckleft.png" class="banner-truck-img-left" alt="Left Truck">
                 <img src="../assets/images/truckright.png" class="banner-truck-img-right" alt="Right Truck">
                 <!-- Banner Content -->
@@ -172,6 +174,107 @@
                             like Balaji
                             Wafers, Vadilal Ice-Cream and Coca-Cola.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICE SLIDER ================= -->
+        <section class="service-slider-main bg-[#0b4cad] py-6 md:py-8">
+            <div class="mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8">
+                <div class="swiper featureSwiper">
+                    <div class="swiper-wrapper text-white font-semibold">
+
+                        <!-- Slide 1 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/truck-icon.svg" alt="Truck"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    On-Time Delivery
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/factory-icon.svg" alt="Factory"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    High-Volume Production
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/hand-icon.svg" alt="Collaboration"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    Client Collaboration
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/medul-icon.svg" alt="Quality Control"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    Certified Quality Control
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate 1 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/truck-icon.svg" alt="Truck"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    On-Time Delivery
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate 2 -->
+                        <div
+                            class="swiper-slide flex items-center justify-center px-4 sm:px-6 md:px-7 lg:px-[28px] md:border-r border-white/30">
+                            <div class="flex items-center justify-center gap-12 md:gap-10">
+                                <span class="leading-none shrink-0">
+                                    <img src="../assets/images/factory-icon.svg" alt="Factory"
+                                        class="w-28 h-28 md:w-25 md:h-25" />
+                                </span>
+                                <span
+                                    class="text-sm sm:text-base md:text-[20px] leading-tight md:leading-[26px] text-center">
+                                    High-Volume Production
+                                </span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

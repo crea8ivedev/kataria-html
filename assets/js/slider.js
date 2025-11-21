@@ -5,7 +5,7 @@ const initSliders = () => {
       spaceBetween: 0,
       loop: true,
       loopAdditionalSlides: 5,        
-      speed: 80000,                   
+      speed: 10000,                   
       autoplay: {
         delay: 0,                     
         disableOnInteraction: false,
@@ -19,15 +19,36 @@ const initSliders = () => {
 
   if (document.querySelector('.service-slider-main')) {
     new Swiper(".featureSwiper", {
-      slidesPerView: 1.3,
-      spaceBetween: 0,
+      slidesPerView: 1.4,   // better spacing for small screens
+      spaceBetween: 16,
       loop: true,
-      autoplay: { delay: 0 },
-      speed: 8000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      speed: 8000,          // smooth continuous marquee speed
+  
       breakpoints: {
-        640: { slidesPerView: 2.2 },
-        768: { slidesPerView: 3.2 },
-        1024: { slidesPerView: 5 }
+        480: {              // small phones
+          slidesPerView: 1.8,
+          spaceBetween: 16,
+        },
+        640: {              // larger phones
+          slidesPerView: 2.4,
+          spaceBetween: 20,
+        },
+        768: {              // tablets
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+        },
+        1024: {             // laptops
+          slidesPerView: 4.2,
+          spaceBetween: 24,
+        },
+        1280: {             // desktops (keeps your original design)
+          slidesPerView: 5,
+          spaceBetween: 24,
+        }
       }
     });
   }

@@ -85,24 +85,22 @@
    =========================== */
 
    .hero-banner-main {
-    @apply relative w-full max-w-[1920px] min-h-[90vh] mx-auto
-    flex items-center justify-center overflow-hidden bg-white;
+    @apply relative w-full max-w-[1920px]  mx-auto h-screen m-auto
+    flex items-center overflow-hidden bg-white;
   }
   
   /* Truck images on left/right (desktop & tablet only) */
 .banner-truck-img-left {
-  @apply hidden absolute left-0 bottom-0 object-contain opacity-[0.15]
-  2xs:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
+  @apply hidden absolute left-0 bottom-0 object-contain opacity-[0.15] sm:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
 }
 
 .banner-truck-img-right {
-  @apply hidden absolute right-0 bottom-0 object-contain opacity-[0.15]
-  2xs:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
+  @apply hidden absolute right-0 bottom-0 object-contain opacity-[0.15] sm:block w-180 sm:w-250 md:w-350 lg:w-400 xl:w-543;
 }
   
   /* Main content wrapper */
   .banner-content {
-    @apply relative z-10 mx-auto px-6 pt-20 text-center;
+    @apply relative z-10 mx-auto px-6 py-20 lg:py-20 md:py-18 sm:py-16  text-center;
   }
   
   /* "Welcome to" text */
@@ -116,17 +114,13 @@
   /* Main gradient heading */
   .banner-h1 {
     @apply inline-block
-    text-[42px] sm:text-[60px] md:text-[80px] lg:text-[96px] xl:text-[110px]
-    leading-[1.1] font-bold
-    bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
+    text-[42px] sm:text-[60px] md:text-[60px] lg:text-[96px] xl:text-[110px] leading-[1.1] font-bold bg-gradient-to-r from-[#D82626] via-[#D82626] to-[#0055A4]
     text-transparent bg-clip-text;
   }
   
   /* Paragraphs */
   .banner-content-one p {
-    @apply text-[16px] sm:text-[18px] leading-[28px] text-gray-400
-    mt-[20px] sm:mt-[24px] lg:mt-[28px]
-    max-w-[811px] mx-auto text-center;
+    @apply text-[18px] sm:text-[16px] sm:text-[18px] leading-[28px] text-gray-400 mt-[10px] sm:mt-[20px] md:mt-[20px] lg:mt-[28px] max-w-[811px] mx-auto text-center;
   }
   
   /* Optional: slightly tighter layout on very small phones */
