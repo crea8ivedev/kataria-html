@@ -537,7 +537,6 @@
 
 /* New Header */
 
-/* base styles (no responsive display here) */
 .header-nev{
   @apply items-center gap-37 font-semibold text-17;
 }
@@ -550,17 +549,6 @@
 .mobile-menu-btn {
   display: none;
 }
-
-/* DESKTOP: ≥ 1200px  -> show nav + buttons, hide burger */
-/* @media (min-width: 1200px) {
-  .header-nev,
-  .header-button {
-    display: flex;
-  }
-  .mobile-menu-btn {
-    display: none !important;
-  }
-} */
 
 /* MOBILE/TABLET: ≤ 1199px -> hide nav + buttons, show burger */
 @media (max-width: 1199px) {
@@ -611,6 +599,8 @@
 .header-blue-button a {
   @apply underline underline-offset-4;
 }
+
+
 
 
 
