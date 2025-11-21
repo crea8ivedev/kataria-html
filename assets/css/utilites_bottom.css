@@ -47,7 +47,7 @@
   }
 
 @media (min-width: 1024px) and (max-width: 1535px) {
-  .testimonial-inner-wrapper .cards-container > :last-child:nth-child(3n + 1) {
+  .our-brands-inner-wrapper .cards-container > :last-child:nth-child(3n + 1) {
     grid-column: 2 / span 1; /* put it in the middle column */
   }
 }
