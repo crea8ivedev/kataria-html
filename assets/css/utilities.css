@@ -202,7 +202,10 @@
   }
 
 
-
+  
+  /* ===========================
+        SWIPER BASE STYLES
+  ============================ */
 .text-content-main{
   @apply flex-1 lg:pt-18 flex flex-col justify-center w-full lg:w-6/12
 }
@@ -221,7 +224,7 @@
 
 
 .about-big-image{
-  @apply relative pt-[92.23%]
+  @apply relative pt-[90%]
 }
 .about-big-image img{
   @apply absolute top-0 left-0 w-full h-full object-cover rounded-[40px]

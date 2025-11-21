@@ -17,41 +17,44 @@ const initSliders = () => {
   }
   
 
-  if (document.querySelector('.service-slider-main')) {
+  if (document.querySelector('.service-slider-main .featureSwiper')) {
     new Swiper(".featureSwiper", {
-      slidesPerView: 1.4,   // better spacing for small screens
-      spaceBetween: 16,
+      // marquee behaviour
       loop: true,
+      speed: 8000,
       autoplay: {
-        delay: 0,
+        delay: 0,                 // continuous scroll
         disableOnInteraction: false,
       },
-      speed: 8000,          // smooth continuous marquee speed
+  
+      slidesPerView: 1.4,
+      spaceBetween: 16,
   
       breakpoints: {
-        480: {              // small phones
+        480: {                    // small phones
           slidesPerView: 1.8,
           spaceBetween: 16,
         },
-        640: {              // larger phones
-          slidesPerView: 2.4,
+        640: {                    // larger phones
+          slidesPerView: 2.2,
+          spaceBetween: 18,
+        },
+        768: {                    // tablets
+          slidesPerView: 3,
           spaceBetween: 20,
         },
-        768: {              // tablets
-          slidesPerView: 3.2,
-          spaceBetween: 20,
+        1024: {                   // 1024–1199px (your problem zone)
+          slidesPerView: 3.5,     // < 4 so it has room & no weird wrap
+          spaceBetween: 22,
         },
-        1024: {             // laptops
-          slidesPerView: 4.2,
+        1200: {                   // bigger laptops / desktops
+          slidesPerView: 4,       // you only have 4 slides
           spaceBetween: 24,
         },
-        1280: {             // desktops (keeps your original design)
-          slidesPerView: 5,
-          spaceBetween: 24,
-        }
-      }
+      },
     });
   }
+  
 
   // COUNTERS
   const section = document.getElementById('distribution-stats');
