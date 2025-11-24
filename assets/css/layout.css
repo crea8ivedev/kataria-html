@@ -32,7 +32,7 @@
 }
 
 /* MOBILE/TABLET: ≤ 1199px -> hide nav + buttons, show burger */
-@media (max-width: 1199px) {
+@media (max-width: 1198px) {
   .header-nev,
   .header-button {
     display: none;
