@@ -1036,3 +1036,53 @@
 .testimonial-slider-card-wrapper .card .owner-info .owner-role {
   @apply font-inter text-16 leading-28 font-normal;
 }
+
+
+
+/* ===========================
+   Our Team
+   =========================== */
+
+   .our-team-section-main {
+    @apply bg-white py-16 md:py-24 overflow-x-hidden;
+  }
+  .our-team-wrapper {
+    @apply max-w-1682 mx-auto px-20 sm:px-24 lg:px-30 xl:px-40;
+  }
+  .our-team-wrapper .team-heading-container {
+    @apply mb-12 md:mb-16 flex flex-col items-center text-center gap-12;
+  }
+  
+  
+  .our-team-wrapper .team-heading-container .team-pre-heading {
+    @apply flex items-center  justify-center gap-6;
+  }
+  .our-team-wrapper .team-heading-container .team-pre-heading p {
+    @apply w-80 flex items-center font-body font-medium text-14 uppercase text-[#000000];
+  }
+  .our-team-wrapper .team-heading-container .team-pre-heading img {
+    @apply w-20 h-20 object-contain items-center justify-center;
+  }
+  .our-team-wrapper .team-heading-container h2 {
+    @apply font-heading font-bold text-[#D82626] capitalize text-28 sm:text-30 md:text-40 md:leading-58 max-w-797 mx-auto px-10 sm:px-0;
+  }
+  
+  .our-team-wrapper .card-grid {
+    @apply grid py-40 sm:py-40 md:py-50 lg:py-60 xl:py-70 gap-y-30 gap-x-30 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+  }
+  .our-team-wrapper .card-grid .card-container  {
+    @apply relative w-full rounded-30 overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.08)];
+  }
+  .our-team-wrapper .card-grid .card-container .gradient-overlay  {
+    @apply pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_55%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.35)_100%)];
+  }
+  .our-team-wrapper .card-grid .card-container .card-bottom-section  {
+    @apply absolute left-0 bottom-0 w-full h-86 bg-[#0055A4] rounded-b-30 z-10;
+  }
+  .our-team-wrapper .card-grid .card-container .card-bottom-section .owner-info-wrapper {
+    @apply flex flex-col justify-center items-start gap-7 px-20 py-15 [@media(max-width:320px)]:py-8;
+  }
+
+
+
+/* Our Commitment */
