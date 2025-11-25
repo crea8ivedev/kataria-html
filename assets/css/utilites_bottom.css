@@ -719,7 +719,7 @@
 @media (max-width: 1500px) {
 
   .history-section-main {
-    @apply max-w-auto mx-auto mt-104 pb-104 px-4 sm:px-6 lg:px-0 flex flex-col gap-10 lg:gap-[80px];
+    @apply mx-auto mt-104 pb-104 px-4 sm:px-6 lg:px-0 flex flex-col gap-10 lg:gap-[80px];
   }
   
   .history-top-flex {
