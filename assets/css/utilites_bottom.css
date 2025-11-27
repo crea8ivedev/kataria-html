@@ -146,7 +146,82 @@
     transition-timing-function: linear !important;
   }
 
-
-
-
   
+
+/* Location Slider Start */
+.location-section {
+  @apply w-full bg-white;
+}
+
+/* Overall width + vertical spacing:
+   - margin-top: 120 (space from previous section)
+   - padding-bottom: 120 (space after map)
+*/
+.location-wrapper {
+  @apply max-w-6xl mx-auto
+         px-20 md:px-32 lg:px-40
+         mt-120 pb-120;
+}
+
+/* One slide */
+.location-slide {
+  @apply w-full;
+}
+
+/* Top text block – no extra top padding so it lines up with buttons */
+.location-card {
+  @apply bg-white pb-40;
+}
+
+.location-badge {
+  @apply text-12 tracking-wide text-grey;
+}
+
+.location-title {
+  @apply text-heading-4 sm:text-heading-3-mobile
+         font-semibold text-black;
+}
+
+.location-address {
+  @apply mt-8
+         text-body-3 sm:text-body-2
+         text-font leading-relaxed;
+}
+
+/* Directions: NO underline at all, but keep bottom pink line element */
+.location-directions {
+  @apply mt-12 inline-flex items-center gap-6
+         text-body-3 sm:text-body-2
+         font-medium
+         no-underline hover:no-underline
+         text-[#D82626] hover:text-red-600
+         transition-colors cursor-pointer;
+}
+
+.location-divider {
+  @apply mt-16 h-px w-64 bg-[#D82626];
+}
+
+/* Map aligned with text on left/right, 40px below content, 20px radius */
+.location-map {
+  @apply w-full mt-40
+         rounded-20 overflow-hidden;
+}
+
+/* Slider arrows:
+   - Positioned relative to .location-wrapper (which is `relative` in HTML)
+   - Same top as title/content, aligned to right edge
+*/
+.location-slider-controls {
+  @apply absolute right-0 top-0
+         flex items-center gap-10;
+}
+
+.location-slider-btn {
+  @apply flex h-40 w-40 items-center justify-center
+         rounded-50p
+         bg-orange-100 text-[#FF4D00]
+         hover:bg-[#FF4D00] hover:text-white
+         transition-colors cursor-pointer;
+}
+/* Location Slider End */

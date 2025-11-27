@@ -94,7 +94,7 @@
 }
 
 .footer-main-wrapper {
-  @apply relative z-10 max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-20 font-body py-24 text-16 sm:text-xs md:text-sm;
+  @apply relative z-10 max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-20 font-normal font-body py-24 text-16 sm:text-xs md:text-sm;
 }
 
 .footer-main-wrapper .copyright p {
@@ -102,5 +102,14 @@
 }
 
 .footer-main-wrapper .footer-menu ul {
-  @apply flex flex-wrap items-center justify-center gap-x-20 gap-y-20  whitespace-nowrap;
+  @apply flex flex-wrap items-center justify-center gap-x-20 gap-y-20 whitespace-nowrap;
 }
+
+.footer-main-wrapper .footer-menu ul li {
+  @apply cursor-pointer transition-colors hover:text-[#D82626];
+}
+
+.footer-main-wrapper .footer-menu ul li.active {
+  @apply text-[#D82626];
+}
+

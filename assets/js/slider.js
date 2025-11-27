@@ -142,6 +142,76 @@ const initSliders = () => {
     const active = document.querySelector(".year-tab.active");
     if (active) moveDotTo(active);
   });
+
+
+  // ===================== LOCATION / MAP SLIDER =====================
+  // HTML requirements:
+  // - wrap whole block in .location-section (your section)
+  // - each slide:  <article data-location-slide> ... </article>
+  // - prev button: <button data-location-prev>…</button>
+  // - next button: <button data-location-next>…</button>
+
+  const locationSections = document.querySelectorAll(".location-section");
+
+  locationSections.forEach(sectionEl => {
+    const slides = sectionEl.querySelectorAll("[data-location-slide]");
+    const prevBtn = sectionEl.querySelector("[data-location-prev]");
+    const nextBtn = sectionEl.querySelector("[data-location-next]");
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function showSlide(newIndex) {
+      const total = slides.length;
+      current = (newIndex + total) % total;
+
+      slides.forEach((slide, i) => {
+        if (i === current) {
+          slide.classList.remove("hidden");
+        } else {
+          slide.classList.add("hidden");
+        }
+      });
+    }
+
+    // buttons
+    prevBtn?.addEventListener("click", () => showSlide(current - 1));
+    nextBtn?.addEventListener("click", () => showSlide(current + 1));
+
+    // keyboard (left/right arrows)
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") showSlide(current - 1);
+      if (e.key === "ArrowRight") showSlide(current + 1);
+    });
+
+    // touch swipe (mobile)
+    let startX = null;
+
+    sectionEl.addEventListener("touchstart", (e) => {
+      if (e.touches.length === 1) {
+        startX = e.touches[0].clientX;
+      }
+    });
+
+    sectionEl.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          showSlide(current - 1); // swipe right -> previous
+        } else {
+          showSlide(current + 1); // swipe left -> next
+        }
+      }
+      startX = null;
+    });
+
+    // init first slide
+    showSlide(0);
+    });
 };
 
 export default initSliders;
