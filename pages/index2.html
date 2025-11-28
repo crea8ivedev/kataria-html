@@ -22,108 +22,134 @@
 
 
 
-        <!-- Map Section Start -->
-        <section class="location-section">
-            <div class="location-wrapper relative">
+<!-- Map Section Start -->
+<section class="location-section">
+  <div class="location-wrapper">
 
-                <!-- Slider Controls -->
-                <div class="location-slider-controls">
-                    <button type="button" class="location-slider-btn" data-location-prev>
-                        <!-- left arrow -->
-                        <span class="inline-block -translate-x-[1px]">&larr;</span>
-                    </button>
-                    <button type="button" class="location-slider-btn" data-location-next>
-                        <!-- right arrow -->
-                        <span class="inline-block translate-x-[1px]">&rarr;</span>
-                    </button>
-                </div>
+    <div class="space-y-4 sm:space-y-5">
 
-                <!-- Slides wrapper (only one visible at a time) -->
-                <div class="space-y-4 sm:space-y-5">
+      <!-- SLIDE 1 -->
+      <article class="location-slide" data-location-slide>
+        <div class="location-inner">
+          <div class="location-card">
+            <p class="location-badge">Corporate Office</p>
+            <h3 class="location-title">KATARIA ENTERPRISE</h3>
+            <p class="location-address">
+              Tower Building, Kalawad Road, Vad-Vajdi,<br />
+              RAJKOT-360021 (GUJRAT) (INDIA)
+            </p>
 
-                    <!-- SLIDE 1 -->
-                    <article class="location-slide" data-location-slide>
-                        <div class="location-card">
-                            <p class="location-badge">Corporate Office</p>
-                            <h3 class="location-title">KATARIA ENTERPRISE</h3>
-                            <p class="location-address">
-                                Tower Building, Kalawad Road, Vad-Vajdi,<br />
-                                RAJKOT-360021 (GUJRAT) (INDIA)
-                            </p>
+            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions" rel="noopener">
+              <span>Directions</span>
+              <span class="text-13">↗</span>
+            </a>
+          </div>
 
-                            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions">
-                                <span>Directions</span>
-                                <span class="text-[13px]">↗</span>
-                            </a>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full aspect-video md:aspect-16/7"
+              title="Kataria Enterprise map">
+            </iframe>
+          </div>
 
-                            <div class="location-divider"></div>
-                        </div>
+          <!-- Controls: placed AFTER the map in DOM so on mobile they are below the map.
+               CSS moves them to top-right (absolute) on md+ so they appear parallel to the title. -->
+          <div class="location-slider-controls" role="group" aria-label="Slide controls">
+            <button type="button" class="location-slider-btn" data-location-prev aria-label="Previous slide">
+              <span class="inline-block -translate-x-[1px]">&larr;</span>
+            </button>
+            <button type="button" class="location-slider-btn" data-location-next aria-label="Next slide">
+              <span class="inline-block translate-x-[1px]">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-                        <div class="location-map">
-                            <!-- Replace src with your Google Maps iframe -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                class="w-full aspect-video md:aspect-16/7">
-                            </iframe>
-                        </div>
-                    </article>
+      <!-- SLIDE 2 -->
+      <article class="location-slide hidden" data-location-slide>
+        <div class="location-inner">
+          <div class="location-card">
+            <p class="location-badge">Branch Office</p>
+            <h3 class="location-title">KATARIA ENTERPRISE – Ahmedabad</h3>
+            <p class="location-address">
+              Some Tower, Main Road,<br />
+              AHMEDABAD-380001 (GUJRAT) (INDIA)
+            </p>
 
-                    <!-- SLIDE 2 -->
-                    <article class="location-slide hidden" data-location-slide>
-                        <div class="location-card">
-                            <p class="location-badge">Branch Office</p>
-                            <h3 class="location-title">KATARIA ENTERPRISE – Ahmedabad</h3>
-                            <p class="location-address">
-                                Some Tower, Main Road,<br />
-                                AHMEDABAD-380001 (GUJRAT) (INDIA)
-                            </p>
+            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions" rel="noopener">
+              <span>Directions</span>
+              <span class="text-13">↗</span>
+            </a>
+          </div>
 
-                            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions">
-                                <span>Directions</span>
-                                <span class="text-[13px]">↗</span>
-                            </a>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full aspect-video md:aspect-16/7"
+              title="Kataria Enterprise map - Ahmedabad">
+            </iframe>
+          </div>
 
-                            <div class="location-divider"></div>
-                        </div>
+          <div class="location-slider-controls" role="group" aria-label="Slide controls">
+            <button type="button" class="location-slider-btn" data-location-prev aria-label="Previous slide">
+              <span class="inline-block -translate-x-[1px]">&larr;</span>
+            </button>
+            <button type="button" class="location-slider-btn" data-location-next aria-label="Next slide">
+              <span class="inline-block translate-x-[1px]">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-                        <div class="location-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                class="w-full aspect-video md:aspect-16/7">
-                            </iframe>
-                        </div>
-                    </article>
+      <!-- SLIDE 3 -->
+      <article class="location-slide hidden" data-location-slide>
+        <div class="location-inner">
+          <div class="location-card">
+            <p class="location-badge">Warehouse</p>
+            <h3 class="location-title">KATARIA ENTERPRISE – Warehouse</h3>
+            <p class="location-address">
+              Industrial Area, Plot 12,<br />
+              RAJKOT-360021 (GUJRAT) (INDIA)
+            </p>
 
-                    <!-- SLIDE 3 -->
-                    <article class="location-slide hidden" data-location-slide>
-                        <div class="location-card">
-                            <p class="location-badge">Warehouse</p>
-                            <h3 class="location-title">KATARIA ENTERPRISE – Warehouse</h3>
-                            <p class="location-address">
-                                Industrial Area, Plot 12,<br />
-                                RAJKOT-360021 (GUJRAT) (INDIA)
-                            </p>
+            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions" rel="noopener">
+              <span>Directions</span>
+              <span class="text-13">↗</span>
+            </a>
+          </div>
 
-                            <a href="https://maps.app.goo.gl/hrvvperxGkbUhzaN8" target="_blank" class="location-directions">
-                                <span>Directions</span>
-                                <span class="text-[13px]">↗</span>
-                            </a>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full aspect-video md:aspect-16/7"
+              title="Kataria Enterprise map - Warehouse">
+            </iframe>
+          </div>
 
-                            <div class="location-divider"></div>
-                        </div>
+          <div class="location-slider-controls" role="group" aria-label="Slide controls">
+            <button type="button" class="location-slider-btn" data-location-prev aria-label="Previous slide">
+              <span class="inline-block -translate-x-[1px]">&larr;</span>
+            </button>
+            <button type="button" class="location-slider-btn" data-location-next aria-label="Next slide">
+              <span class="inline-block translate-x-[1px]">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
 
-                        <div class="location-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.804169447162!2d70.7002834!3d22.260128700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cc6ec232dc79%3A0x65cf60c02bf30b34!2sKataria%20Enterprise!5e1!3m2!1sen!2sin!4v1764249298126!5m2!1sen!2sin"
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                class="w-full aspect-video md:aspect-[16/7]">
-                            </iframe>
-                        </div>
-                    </article>
+    </div> <!-- /.slides -->
+  </div> <!-- /.wrapper -->
+</section>
+<!-- Map Section End -->
 
-                </div>
-            </div>
-        </section>
-        <!-- Map Section End -->
+
 
 
     </main>
