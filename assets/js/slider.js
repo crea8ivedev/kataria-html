@@ -4,18 +4,18 @@ const initSliders = () => {
       slidesPerView: 'auto',
       spaceBetween: 0,
       loop: true,
-      loopAdditionalSlides: 5,        
-      speed: 10000,                   
+      loopAdditionalSlides: 5,
+      speed: 10000,
       autoplay: {
-        delay: 0,                     
+        delay: 0,
         disableOnInteraction: false,
       },
       freeMode: true,
-      freeModeMomentum: false,        
+      freeModeMomentum: false,
       allowTouchMove: false,
     });
   }
-  
+
 
   if (document.querySelector('.service-slider-main .featureSwiper')) {
     new Swiper(".featureSwiper", {
@@ -26,10 +26,10 @@ const initSliders = () => {
         delay: 0,                 // continuous scroll
         disableOnInteraction: false,
       },
-  
+
       slidesPerView: 1.4,
       spaceBetween: 16,
-  
+
       breakpoints: {
         480: {                    // small phones
           slidesPerView: 1.8,
@@ -54,7 +54,7 @@ const initSliders = () => {
       },
     });
   }
-  
+
 
   // COUNTERS
   const section = document.getElementById('distribution-stats');
@@ -144,71 +144,80 @@ const initSliders = () => {
   });
 
 
-  // ===================== LOCATION / MAP SLIDER =====================
- // ===================== LOCATION / MAP SLIDER (delegated controls) =====================
-const locationSections = document.querySelectorAll(".location-section");
+  // ===================== LOCATION / MAP SLIDER (sliding track, delegated) =====================
+  const locationSections = document.querySelectorAll(".location-section");
 
-locationSections.forEach(sectionEl => {
-  const slides = sectionEl.querySelectorAll("[data-location-slide]");
-  if (!slides.length) return;
+  locationSections.forEach(sectionEl => {
+    const track = sectionEl.querySelector(".location-slides-track");
+    const slides = sectionEl.querySelectorAll("[data-location-slide]");
+    if (!track || slides.length === 0) return;
 
-  let current = 0;
-
-  const showSlide = (newIndex) => {
     const total = slides.length;
-    current = (newIndex + total) % total;
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("hidden", i !== current);
+    let current = 0;
+    let isAnimating = false;
+
+    slides.forEach(s => s.style.width = "100%");
+
+    function goTo(index) {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const newIndex = ((index % total) + total) % total;
+      const translateX = -newIndex * 100;
+      track.style.transform = `translateX(${translateX}%)`;
+
+      slides.forEach((s, i) => {
+        s.setAttribute("aria-hidden", i === newIndex ? "false" : "true");
+      });
+
+      const onEnd = () => {
+        isAnimating = false;
+        track.removeEventListener("transitionend", onEnd);
+      };
+      track.addEventListener("transitionend", onEnd);
+
+      current = newIndex;
+    }
+
+    // delegated clicks
+    sectionEl.addEventListener("click", (e) => {
+      const prev = e.target.closest("[data-location-prev]");
+      if (prev) { e.preventDefault(); goTo(current - 1); return; }
+
+      const next = e.target.closest("[data-location-next]");
+      if (next) { e.preventDefault(); goTo(current + 1); return; }
     });
-  };
 
-  // Delegated click handler for prev/next buttons (works with multiple button copies)
-  sectionEl.addEventListener("click", (e) => {
-    const prevBtn = e.target.closest("[data-location-prev]");
-    if (prevBtn) {
-      e.preventDefault();
-      showSlide(current - 1);
-      return;
-    }
-    const nextBtn = e.target.closest("[data-location-next]");
-    if (nextBtn) {
-      e.preventDefault();
-      showSlide(current + 1);
-      return;
-    }
+    // keyboard when section in view
+    window.addEventListener("keydown", (e) => {
+      const rect = sectionEl.getBoundingClientRect();
+      if (!(rect.top < window.innerHeight && rect.bottom > 0)) return;
+      if (e.key === "ArrowLeft") goTo(current - 1);
+      if (e.key === "ArrowRight") goTo(current + 1);
+    });
+
+    // swipe on track
+    let startX = null;
+    track.addEventListener("touchstart", (e) => {
+      if (e.touches.length === 1) startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      const diff = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goTo(current - 1);
+        else goTo(current + 1);
+      }
+    }, { passive: true });
+
+    // init state
+    track.style.transform = `translateX(0%)`;
+    slides.forEach((s, i) => s.setAttribute("aria-hidden", i === 0 ? "false" : "true"));
   });
 
-  // Keyboard (left/right arrows) scoped to section: only respond when section is visible in viewport
-  window.addEventListener("keydown", (e) => {
-    // optional: only act when section is in view (helps avoid interfering with other sections)
-    const rect = sectionEl.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight && rect.bottom > 0;
-    if (!inView) return;
 
-    if (e.key === "ArrowLeft") showSlide(current - 1);
-    if (e.key === "ArrowRight") showSlide(current + 1);
-  });
-
-  // Touch swipe (mobile)
-  let startX = null;
-  sectionEl.addEventListener("touchstart", (e) => {
-    if (e.touches.length === 1) startX = e.touches[0].clientX;
-  });
-
-  sectionEl.addEventListener("touchend", (e) => {
-    if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const diff = endX - startX;
-    startX = null;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) showSlide(current - 1); // swipe right -> prev
-      else showSlide(current + 1);          // swipe left -> next
-    }
-  });
-
-  // initialize
-  showSlide(0);
-});
 
 };
 
