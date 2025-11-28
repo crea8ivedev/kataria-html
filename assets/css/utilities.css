@@ -82,6 +82,10 @@
   {
     width: auto;
   }
+  .announcement-bar .swiper-wrapper 
+  {
+    transition-timing-function: linear;
+  }
 
 
 /* ===========================
@@ -219,4 +223,116 @@
          transition-colors cursor-pointer;
 }
   
+
+/* ===========================
+      ABOUT
+============================ */
+.text-content-main{
+  @apply flex-1 lg:pt-18 flex flex-col justify-center w-full lg:w-6/12
+}
+
+.about-big-image{
+  @apply w-full rounded-[40px] overflow-hidden relative pt-[92.23%]
+}
+
+.about-big-image > img{
+  @apply absolute top-0 left-0 w-full h-full
+}
+
+.about-clip-path-card{
+  @apply hidden lg:flex absolute w-[344px] h-[340px] items-center justify-center bg-white rounded-[40px] shadow-[0_18px_40px_rgba(0,0,0,0.16)] bottom-0 right-0 rounded-[40px];
+}
+
+
+.about-big-image{
+  @apply relative pt-[90%]
+}
+.about-big-image img{
+  @apply absolute top-0 left-0 w-full h-full object-cover rounded-[40px]
+}
+
+.about-main{
+  @apply relative bg-white pt-100 pb-105
+}
+
+.about-wrape{
+  @apply flex flex-col lg:flex-row gap-35 lg:gap-70
+}
+
+.about-main-img{
+  @apply w-full lg:w-6/12 relative
+}
+
+.about-clip-path-card-wrap{
+  @apply w-[284px] h-[292px] rounded-[40px] overflow-hidden
+}
+
+.about-label{
+  @apply flex items-center gap-8 mb-[13px]
+}
+
+.text-content-main .about-label .img{
+  @apply w-[20px] h-[20px] object-contain
+}
+
+.text-content-main .about-label span{
+  @apply text-[14px] leading-[18px] tracking-[1px] uppercase text-[#000000]
+}
+
+.text-content-main h2{
+  @apply mb-[14px] font-bold text-[44px] max-w-[786px] leading-[55px] capitalize text-[#000000]
+}
+
+ .about-main-description {
+  @apply max-w-[688px] font-normal mb-[27px] text-[18px] leading-[34px] capitalize text-[#8E8E8E]
+}
+
+.bullat-list-main{
+  @apply max-w-[448px] space-y-[18px]
+}
+
+.bullat-list-main ul{
+  @apply max-w-[448px] space-y-[18px]
+}
+
+.bullat-list-main ul li {
+  @apply flex items-start gap-[12px]
+}
+
+.bullat-list-main ul li img {
+  @apply w-[32px] h-[32px]
+}
+
+.bullat-list-main ul li p {
+  @apply text-[20px] leading-[25px] font-semibold text-[#D82626] items-center capitalize
+}
+
+
+.about-main-button {
+  @apply mt-[50px] inline-flex w-[153px] h-[54px] items-center justify-between 
+  rounded-[6px] bg-[#FF4D00] text-[14px] font-semibold text-white 
+  hover:bg-[#bf1f1f] transition-colors pl-17 pr-5;
+}
+
+/* White box on the right */
+.arrow-box {
+  @apply w-[40px] h-[40px] bg-white rounded-[6px] flex items-center justify-center 
+  overflow-hidden relative;
+}
+
+/* Arrow animation */
+.arrow-icon {
+  @apply transform translate-x-3 transition-all duration-300;
+}
+
+/* Hover → move arrow left */
+.about-main-button:hover .arrow-icon {
+  @apply translate-x-0;
+}
+
+
+.about-main{
+  @apply relative w-full max-w-[1920px] mx-auto
+}
+
   
