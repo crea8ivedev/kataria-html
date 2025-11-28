@@ -219,6 +219,62 @@ const initSliders = () => {
 
 
 
+
+/* BRANDS module: apply 1-red / 2-yellow / 3-yellow / 4-red pattern and arrow scrolling */
+(function brandsModule() {
+  const container = document.getElementById('brandsCards');
+  const prev = document.getElementById('brands-prev');
+  const next = document.getElementById('brands-next');
+  if (!container || !prev || !next) return;
+
+  // Pattern: index % 4 -> 0:red, 1:yellow, 2:yellow, 3:red
+  const cards = Array.from(container.querySelectorAll('.brand-card'));
+  cards.forEach((card, i) => {
+    card.classList.remove('brand-card--yellow');
+    const mod = i % 4;
+    if (mod === 1 || mod === 2) {
+      card.classList.add('brand-card--yellow');
+    }
+  });
+
+  // compute scroll nudge amount (half visible width, clamped)
+  function scrollAmount() {
+    return Math.min(container.clientWidth * 0.5, 560);
+  }
+
+  function updateArrows() {
+    const overflow = container.scrollWidth > container.clientWidth + 2;
+    prev.style.display = overflow ? 'inline-flex' : 'none';
+    next.style.display = overflow ? 'inline-flex' : 'none';
+  }
+
+  prev.addEventListener('click', () => {
+    container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+
+  // observe container size changes
+  window.addEventListener('resize', updateArrows);
+  try {
+    const ro = new ResizeObserver(updateArrows);
+    ro.observe(container);
+  } catch (e) {
+    // ResizeObserver may not be available in older browsers; fallback to resize listener (above)
+  }
+
+  // initial state
+  updateArrows();
+})();
+
+
+
+
+
+
+
 };
 
 export default initSliders;
