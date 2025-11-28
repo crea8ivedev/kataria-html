@@ -145,73 +145,71 @@ const initSliders = () => {
 
 
   // ===================== LOCATION / MAP SLIDER =====================
-  // HTML requirements:
-  // - wrap whole block in .location-section (your section)
-  // - each slide:  <article data-location-slide> ... </article>
-  // - prev button: <button data-location-prev>…</button>
-  // - next button: <button data-location-next>…</button>
+ // ===================== LOCATION / MAP SLIDER (delegated controls) =====================
+const locationSections = document.querySelectorAll(".location-section");
 
-  const locationSections = document.querySelectorAll(".location-section");
+locationSections.forEach(sectionEl => {
+  const slides = sectionEl.querySelectorAll("[data-location-slide]");
+  if (!slides.length) return;
 
-  locationSections.forEach(sectionEl => {
-    const slides = sectionEl.querySelectorAll("[data-location-slide]");
-    const prevBtn = sectionEl.querySelector("[data-location-prev]");
-    const nextBtn = sectionEl.querySelector("[data-location-next]");
+  let current = 0;
 
-    if (!slides.length) return;
+  const showSlide = (newIndex) => {
+    const total = slides.length;
+    current = (newIndex + total) % total;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("hidden", i !== current);
+    });
+  };
 
-    let current = 0;
-
-    function showSlide(newIndex) {
-      const total = slides.length;
-      current = (newIndex + total) % total;
-
-      slides.forEach((slide, i) => {
-        if (i === current) {
-          slide.classList.remove("hidden");
-        } else {
-          slide.classList.add("hidden");
-        }
-      });
+  // Delegated click handler for prev/next buttons (works with multiple button copies)
+  sectionEl.addEventListener("click", (e) => {
+    const prevBtn = e.target.closest("[data-location-prev]");
+    if (prevBtn) {
+      e.preventDefault();
+      showSlide(current - 1);
+      return;
     }
+    const nextBtn = e.target.closest("[data-location-next]");
+    if (nextBtn) {
+      e.preventDefault();
+      showSlide(current + 1);
+      return;
+    }
+  });
 
-    // buttons
-    prevBtn?.addEventListener("click", () => showSlide(current - 1));
-    nextBtn?.addEventListener("click", () => showSlide(current + 1));
+  // Keyboard (left/right arrows) scoped to section: only respond when section is visible in viewport
+  window.addEventListener("keydown", (e) => {
+    // optional: only act when section is in view (helps avoid interfering with other sections)
+    const rect = sectionEl.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inView) return;
 
-    // keyboard (left/right arrows)
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") showSlide(current - 1);
-      if (e.key === "ArrowRight") showSlide(current + 1);
-    });
+    if (e.key === "ArrowLeft") showSlide(current - 1);
+    if (e.key === "ArrowRight") showSlide(current + 1);
+  });
 
-    // touch swipe (mobile)
-    let startX = null;
+  // Touch swipe (mobile)
+  let startX = null;
+  sectionEl.addEventListener("touchstart", (e) => {
+    if (e.touches.length === 1) startX = e.touches[0].clientX;
+  });
 
-    sectionEl.addEventListener("touchstart", (e) => {
-      if (e.touches.length === 1) {
-        startX = e.touches[0].clientX;
-      }
-    });
+  sectionEl.addEventListener("touchend", (e) => {
+    if (startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+    startX = null;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) showSlide(current - 1); // swipe right -> prev
+      else showSlide(current + 1);          // swipe left -> next
+    }
+  });
 
-    sectionEl.addEventListener("touchend", (e) => {
-      if (startX === null) return;
-      const endX = e.changedTouches[0].clientX;
-      const diff = endX - startX;
+  // initialize
+  showSlide(0);
+});
 
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          showSlide(current - 1); // swipe right -> previous
-        } else {
-          showSlide(current + 1); // swipe left -> next
-        }
-      }
-      startX = null;
-    });
-
-    // init first slide
-    showSlide(0);
-    });
 };
 
 export default initSliders;
