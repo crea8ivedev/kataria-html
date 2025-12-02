@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "./base.css";
 @import "./components.css";
-@import "./utilities.css";
-/* @import "./utilites_bottom.css"; */
+/* @import "./utilities.css"; */
+@import "./utilites_bottom.css";
 @import "./layout.css";
 @import "./testimonial.css";
 
@@ -19,6 +19,7 @@
 @theme {
   /* color */
   --color-red1:#FF3333;
+  --color-red-bg:#D82626;
   --color-blue1:#003176;
   --color-offwhite:#E0E0E0;
   --color-font:#444444;

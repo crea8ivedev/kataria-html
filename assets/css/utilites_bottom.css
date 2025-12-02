@@ -232,122 +232,90 @@
    ======================== */
 
 
-/* =========================================================
-   BRANDS SECTION (Tailwind utilities via @apply)
-   Pixel-tuned to your Figma screens
-   ========================================================= */
 
-.brands-section {
-  @apply w-full bg-[#C92B2B] text-white;
+/* brand-section */
+.brand-section{
+  @apply items-center justify-center max-w-1920 max-h-858;
+}
+.brand-main-wrapper{
+  @apply flex  flex-wrap  max-w-1920 mx-auto gap-0 bg-red-bg;
 }
 
-.brands-wrapper {
-  @apply max-w-6xl mx-auto px-20 md:px-32 lg:px-40 py-80 md:py-120 relative;
+
+.bg-track{
+  @apply  bg-[url('../assets/images/track-brand.png')] bg-no-repeat bg-bottom-left;
 }
 
-/* layout: single column on mobile, md+: 1fr + 520px fixed */
-.brands-grid {
-  @apply grid grid-cols-1 gap-32 items-start;
-}
-@media (min-width: 768px) {
-  .brands-grid {
-    @apply gap-40;
-    grid-template-columns: 1fr 520px;
-  }
+
+.brand-main-wrapper .left-wrapper {
+  @apply flex flex-col max-w-1/2 w-full  px-120 py-80 ;  
 }
 
-.brands-left { @apply relative; }
-
-.brands-pre { @apply text-12 flex flex-row gap-8 tracking-wide text-white/80 mb-12 ; }
-
-/* Title tuned to Figma: base 44px, slightly larger on big screens */
-.brands-title {
-  @apply font-semibold text-[44px] leading-[1.05] mb-8 text-white;
-  font-family: var(--font-heading);
-  text-transform: none; /* your figma used Title Case / capitalized — keep as you supply */
+.brand-main-wrapper .left-wrapper .inner-wrapper{
+  @apply flex flex-wrap  flex-col items-start gap-12;
 }
 
-/* arrows row */
-.brands-row-wrap { @apply flex items-center justify-between gap-10 mb-6; }
-.brands-row-controls { @apply flex items-center gap-6 ml-auto; }
 
-/* arrow button */
-.brands-arrow {
-  @apply flex items-center justify-center h-[40px] w-[40px] rounded-[50%] bg-white/10 text-white
-         hover:bg-white hover:text-[#C92B2B] transition-colors cursor-pointer;
+.brand-main-wrapper .left-wrapper .inner-wrapper .heading-wrapper{
+  @apply flex flex-col items-start;  
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .heading-wrapper .pre-heading{
+  @apply flex flex-row gap-6 justify-center items-start;  
 }
 
-/* cards grid: 2 columns on sm+ to get 2x2 layout, gap tuned */
-.brands-cards { @apply grid grid-cols-1 sm:grid-cols-2 gap-20 mt-4; }
-
-/* Card: radius, padding, border, translucent red fill to match figma */
-.brand-card {
-  @apply relative rounded-[20px] p-24 md:p-28 overflow-hidden border;
-  background-color: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.12);
-  color: #ffffff;
-  box-sizing: border-box;
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper{
+  @apply justify-between;
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper .slider-inner-wrapper{
+  @apply font-body ;
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper .slider-inner-wrapper .slide-wrapper{
+  @apply font-body ;
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper .slider-inner-wrapper .slide-wrapper .slide{
+   @apply gap-30 flex flex-row flex-wrap; 
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper .slider-inner-wrapper .slide-wrapper .slide .brand-box-red{
+   @apply  w-290 h-190 border-2 p-20 border-white rounded-20 gap-12 text-white; 
+}
+.brand-main-wrapper .left-wrapper .inner-wrapper .brand-slider-wrapper .slider-inner-wrapper .slide-wrapper .slide .brand-box-yellow{
+   @apply bg-yellow-300 w-290 h-190 border-2 p-20 border-black rounded-20 gap-12 text-black; 
 }
 
-/* Yellow highlighted card variant */
-.brand-card--yellow {
-  @apply rounded-[20px] p-24 md:p-28;
-  background-color: #FFF200;
-  border-color: rgba(0,0,0,0.12);
-  color: #081312;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brand-main-wrapper .right-wrapper{
+  @apply flex max-w-1/2 w-full;
+}
+.brand-main-wrapper .right-wrapper .inner-wrapper{
+  @apply relative;
 }
 
-/* Logo + content */
-.brand-logo { @apply h-12 mb-6; max-width: 110px; object-fit: contain; }
-.brand-card-title { @apply text-[20px] md:text-[22px] font-semibold mb-4 leading-[1.05]; }
-.brand-card-desc { @apply text-[14px] leading-relaxed; color: inherit; }
-
-/* CTA */
-.brands-cta { @apply mt-30 text-[16px] font-medium underline underline-offset-2 text-white; }
-
-/* RIGHT panel: outer container — larger radius and inset inner panel so corners read like Figma */
-.brands-right {
-  @apply rounded-[24px] overflow-hidden relative bg-[rgba(255,255,255,0.02)] flex items-center justify-center p-6;
-  @apply min-h-[520px];
+.quote-line{
+  @apply flex flex-row;
 }
-
-/* inner inset panel to create the lighter rounded card inside the outer rounded container */
-.brands-right .brands-placeholder-inner {
-  @apply w-full h-full rounded-[20px] overflow-hidden flex items-center justify-center;
-  background-color: rgba(255,255,255,0.02);
-  padding: 32px;
-  box-sizing: border-box;
+.quote-line p{
+  @apply text-white text-[19px] font-normal ; 
 }
-
-/* checkerboard placeholder itself (complex gradient kept in CSS) */
-.brands-placeholder {
-  @apply w-full h-full flex items-center justify-center text-black/60 font-medium rounded-[12px];
-  background-image: linear-gradient(45deg,#d1d1d1 25%, transparent 25%),
-                    linear-gradient(-45deg,#d1d1d1 25%, transparent 25%),
-                    linear-gradient(45deg, transparent 75%, #d1d1d1 75%),
-                    linear-gradient(-45deg, transparent 75%, #d1d1d1 75%);
-  background-size: 48px 48px;
-  background-position: 0 0, 0 24px, 24px -24px, -24px 0;
-  color: rgba(0,0,0,0.6);
+.quote-line a{
+  @apply text-white text-[19px] font-semibold underline hover:text-red-950; 
 }
-
-/* Responsive tweaks to remain faithful to Figma proportions */
-@media (min-width: 1024px) {
-  .brands-wrapper { @apply px-24; }
-  .brands-title { @apply text-[56px]; } /* Figma large title look — adjust as needed */
-  .brand-card { @apply p-32; }
-  .brands-right { @apply min-h-[620px]; }
-  .brands-right .brands-placeholder-inner { padding: 40px; }
-}
-
-@media (max-width: 767px) {
-  .brands-wrapper { @apply px-12 py-56; }
-  .brands-title { @apply text-[40px] mb-12; }
-  .brand-card { @apply p-20; }
-  .brands-right { @apply min-h-[320px]; }
-  .brands-right .brands-placeholder-inner { padding: 20px; }
-}
-
-/* =========================================================
-   END BRANDS SECTION
-   ========================================================= */
