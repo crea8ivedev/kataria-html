@@ -138,57 +138,39 @@
   }
 
 
+  /* ===============
+   LOCATION MAP SLIDER 
+   ================= */
 
-   /* ===========================
-     Location Slider Start 
-     =========================== */
 
-/* Section wrapper */
 .location-section {
   @apply w-full bg-white;
 }
 
-/* overall width + vertical spacing */
 .location-wrapper {
-  @apply max-w-6xl mx-auto px-20 md:px-32 lg:px-40 mt-120 pb-120;
+  @apply relative max-w-6xl mx-auto px-20 md:px-32 lg:px-40 mt-120 pb-120;
 }
 
-/* positioning context for controls (so absolute works on md+) */
 .location-inner {
   @apply relative w-full;
 }
 
-/* Top text card (no left/right padding to align with map) */
 .location-card {
   @apply bg-white pb-20;
 }
 
-/* Map placed directly under card, same width as card */
-.location-map {
-  @apply w-full mt-40 rounded-20 overflow-hidden;
-}
-
-/* Slide */
-.location-slide {
-  @apply w-full;
-}
-
-/* Small preheading */
 .location-badge {
   @apply text-12 tracking-wide text-grey;
 }
 
-/* Big title */
 .location-title {
   @apply text-heading-4 sm:text-heading-3-mobile font-semibold text-black;
 }
 
-/* Address text */
 .location-address {
   @apply mt-8 text-body-3 sm:text-body-2 text-font leading-relaxed;
 }
 
-/* Directions link: no underline */
 .location-directions {
   @apply mt-12 inline-flex items-center gap-6
          text-body-3 sm:text-body-2 font-medium
@@ -197,24 +179,34 @@
          transition-colors cursor-pointer;
 }
 
-/* small pink divider under directions (optional) */
 .location-divider {
   @apply mt-16 h-px w-64 bg-[#D82626];
 }
 
-/*
-  Controls positioning:
-  - MOBILE: static block under the map (centered)
-  - MD+: absolute inside .location-inner at top-right (parallel to title)
-*/
-.location-slider-controls {
-  @apply flex justify-center gap-10 mt-20 relative;
-
-  /* desktop: position inside the inner box top-right */
-  @apply md:absolute md:top-6 md:right-6 md:mt-0 md:justify-end;
+.location-map {
+  @apply w-full mt-40 rounded-20 overflow-hidden;
 }
 
-/* Buttons: responsive sizes, no shadow, token-based */
+.location-slides-viewport {
+  @apply w-full overflow-hidden relative;
+}
+
+.location-slides-track {
+  @apply flex transition-transform duration-500 ease-in-out;
+}
+
+.location-slide {
+  @apply w-full shrink-0;
+}
+
+.location-slider-controls {
+  @apply flex justify-center gap-10 mt-20 relative z-50;
+}
+
+.location-slider-controls {
+  @apply md:absolute md:top-24 md:right-40 md:mt-0 md:justify-end;
+}
+
 .location-slider-btn {
   @apply flex h-32 w-32 md:h-40 md:w-40 items-center justify-center
          rounded-50p
@@ -222,7 +214,10 @@
          hover:bg-[#FF4D00] hover:text-white
          transition-colors cursor-pointer;
 }
-  
+
+/* ========================
+   END LOCATION MAP SLIDER 
+   ======================== */  
 
 /* ===========================
       ABOUT
