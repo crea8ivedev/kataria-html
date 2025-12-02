@@ -218,6 +218,30 @@ const initSliders = () => {
   });
 
 
+  const swiper = new Swiper('.story-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    // helpful when slides or container change size
+    observer: true,
+    observeParents: true,
+    // responsive if you want more slides on wider screens
+    breakpoints: {
+      1024: {
+        slidesPerView: 1,
+      }
+    }
+  });
+
+
 
 
 /* BRANDS module: apply 1-red / 2-yellow / 3-yellow / 4-red pattern and arrow scrolling */

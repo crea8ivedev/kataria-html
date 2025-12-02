@@ -325,9 +325,18 @@
   @apply translate-x-0;
 }
 
-
 .about-main{
   @apply relative w-full max-w-[1920px] mx-auto
 }
 
-  
+
+/* ===========================
+      HISORY
+============================ */
+.story-wrapper .swiper-button-next::after, 
+.story-wrapper  .swiper-button-prev::after {
+  @apply hidden
+}
+.story-wrapper .swiper-button-next , .story-wrapper  .swiper-button-prev{
+  @apply relative inset-0
+}
