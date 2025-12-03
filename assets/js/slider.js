@@ -244,54 +244,137 @@ const initSliders = () => {
 
 
 
-/* BRANDS module: apply 1-red / 2-yellow / 3-yellow / 4-red pattern and arrow scrolling */
-(function brandsModule() {
-  const container = document.getElementById('brandsCards');
-  const prev = document.getElementById('brands-prev');
-  const next = document.getElementById('brands-next');
-  if (!container || !prev || !next) return;
+  /* BRANDS module: apply 1-red / 2-yellow / 3-yellow / 4-red pattern and arrow scrolling */
+  (function brandsModule() {
+    const container = document.getElementById('brandsCards');
+    const prev = document.getElementById('brands-prev');
+    const next = document.getElementById('brands-next');
+    if (!container || !prev || !next) return;
 
-  // Pattern: index % 4 -> 0:red, 1:yellow, 2:yellow, 3:red
-  const cards = Array.from(container.querySelectorAll('.brand-card'));
-  cards.forEach((card, i) => {
-    card.classList.remove('brand-card--yellow');
-    const mod = i % 4;
-    if (mod === 1 || mod === 2) {
-      card.classList.add('brand-card--yellow');
+    // Pattern: index % 4 -> 0:red, 1:yellow, 2:yellow, 3:red
+    const cards = Array.from(container.querySelectorAll('.brand-card'));
+    cards.forEach((card, i) => {
+      card.classList.remove('brand-card--yellow');
+      const mod = i % 4;
+      if (mod === 1 || mod === 2) {
+        card.classList.add('brand-card--yellow');
+      }
+    });
+
+    // compute scroll nudge amount (half visible width, clamped)
+    function scrollAmount() {
+      return Math.min(container.clientWidth * 0.5, 560);
     }
+
+    function updateArrows() {
+      const overflow = container.scrollWidth > container.clientWidth + 2;
+      prev.style.display = overflow ? 'inline-flex' : 'none';
+      next.style.display = overflow ? 'inline-flex' : 'none';
+    }
+
+    prev.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', () => {
+      container.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    });
+
+    // observe container size changes
+    window.addEventListener('resize', updateArrows);
+    try {
+      const ro = new ResizeObserver(updateArrows);
+      ro.observe(container);
+    } catch (e) {
+      // ResizeObserver may not be available in older browsers; fallback to resize listener (above)
+    }
+
+    // initial state
+    updateArrows();
+  })();
+
+  // const brandEl = document.querySelector(".brandSwiper");
+  // if (brandEl) {
+
+  //   // auto red/yellow pattern
+  //   (function applyPattern() {
+  //     const cards = Array.from(document.querySelectorAll(".brand-card"));
+  //     cards.forEach((c, i) => {
+  //       c.classList.remove("brand-card--red", "brand-card--yellow");
+  //       const mod = i % 4;
+  //       if (mod === 1 || mod === 2) {
+  //         c.classList.add("brand-card--yellow");
+  //       } else {
+  //         c.classList.add("brand-card--red");
+  //       }
+  //     });
+  //   })();
+
+  //   // Swiper initialization
+  //   const brandSwiper = new Swiper(".brandSwiper", {
+  //     loop: true,
+  //     slidesPerView: 1,
+  //     spaceBetween: 30,
+  //     observeParents: true,
+  //     observer: true,
+
+  //     pagination: {
+  //       el: ".brandSwiper .swiper-pagination",
+  //       clickable: true,
+  //     },
+
+  //     navigation: {
+  //       nextEl: ".brand-next",
+  //       prevEl: ".brand-prev",
+  //     },
+
+  //     breakpoints: {
+  //       768: { slidesPerView: 1 },
+  //       1024: { slidesPerView: 1 },
+  //     },
+  //   });
+  // }
+
+
+
+  // color pattern 1-red, 2-yellow, 3-yellow, 4-red
+  document.querySelectorAll(".swiper-slide").forEach(slide => {
+    const cards = slide.querySelectorAll(".brand-card");
+    cards.forEach((card, i) => {
+      const mod = i % 4;
+      if (mod === 1 || mod === 2) {
+        card.classList.remove("text-white", "border-white");
+        card.classList.add("bg-yellow-300", "text-black", "border-black");
+      } else {
+        card.classList.remove("text-black", "border-black", "bg-yellow-300");
+        card.classList.add("text-white", "border-white");
+      }
+    });
   });
 
-  // compute scroll nudge amount (half visible width, clamped)
-  function scrollAmount() {
-    return Math.min(container.clientWidth * 0.5, 560);
-  }
+  // Swiper
+  const brandswiper = new Swiper(".brandSwiper", {
+    speed: 800,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
 
-  function updateArrows() {
-    const overflow = container.scrollWidth > container.clientWidth + 2;
-    prev.style.display = overflow ? 'inline-flex' : 'none';
-    next.style.display = overflow ? 'inline-flex' : 'none';
-  }
+    navigation: {
+      nextEl: "#brands-next",
+      prevEl: "#brands-prev",
+    },
 
-  prev.addEventListener('click', () => {
-    container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    observer: true,
+    observeParents: true,
   });
 
-  next.addEventListener('click', () => {
-    container.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-  });
 
-  // observe container size changes
-  window.addEventListener('resize', updateArrows);
-  try {
-    const ro = new ResizeObserver(updateArrows);
-    ro.observe(container);
-  } catch (e) {
-    // ResizeObserver may not be available in older browsers; fallback to resize listener (above)
-  }
 
-  // initial state
-  updateArrows();
-})();
 
 
 

@@ -17,119 +17,187 @@
   <main>
 
 
+    <section class="w-full bg-red-bg opecity-40 p-0 m-0">
+      <div class="max-w-1920 mx-auto flex flex-col lg:flex-row ">
 
-    <!-- Brand Slider Section -->
+        <!-- LEFT -->
+        <div
+          class="w-full relative lg:w-1/2 flex flex-col gap-12 2xl:px-120 xl:px-80 md:50 sm:30 px-20 2xl:py-80 xl:py-70 md:px-60 sm:px-30 py-20 ">
+          <img src="../assets/images/track-brand.png" class="absolute bottom-0 left-0 " alt="track-brand background">
 
-    <section class="brand-section">
-      <div class="brand-main-wrapper bg-track">
+          <!-- Title -->
+          <div class="flex flex-col gap-12">
 
-        <div class="left-wrapper">
-          <div class="inner-wrapper">
-
-
-            <div class="heading-wrapper">
-
-              <div class="pre-heading">
-                <img class="w-22 h-22" src="../assets/images/white-truck.svg" alt="">
-                <span class="uppercase text-14 font-body text-white">BRANDS</span>
-              </div>
-
-              <h2 class="font-heading text-44 text-white max-w-609">Trusted by India’s Leading Names</h2>
+            <div class="flex flex-row items-center gap-6"><img src="../assets/images/white-truck.svg" alt="">
+              <p class="text-white text-xs tracking-wide uppercase">Brands</p>
             </div>
 
+            <h2 class="text-white text-3xl lg:text-4xl font-bold leading-tight">
+              Trusted By India’s Leading Names
+            </h2>
+          </div>
 
-            <div class="brand-slider-wrapper ">
+          <!-- Arrows -->
+          <div class="flex gap-6 justify-end ">
+            <button id="brands-prev" class="rounded-full flex items-center justify-center">
+              <img src="/assets/images/left-slide-arrow.svg" class="w-22 h-22" />
+            </button>
+            <button id="brands-next" class=" rounded-full flex items-center justify-center">
+              <img src="/assets/images/right-slide-arrow.svg" class="w-22 h-22" />
+            </button>
+          </div>
 
-              <div class="slider-inner-wrapper">
+          <!-- SLIDER -->
+          <div class="swiper brandSwiper w-full">
 
+            <div class="swiper-wrapper">
 
+              <!-- SLIDE 1 -->
+              <div class="swiper-slide">
 
-                <div class="slide-wrapper">
-
-                  <div class="flex flex-row gap-10 justify-end h-50 items-start">
-                    <span><img src="../assets/images/left-slide-arrow.svg" alt="right-slide"></span>
-                    <span><img src="../assets/images/right-slide-arrow.svg" alt="left-slide"></span>
+                <div class="grid grid-cols-2 xl:grid-cols-2  xl:10 2xl:gap-30 flex-wrap">
+                  <!-- CARD 1 -->
+                  <div class="flex flex-wrap flex-col shrink max-w-290">
+                    <div
+                      class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11  sm:w-290 sm:h-190 shrink">
+                      <img src="/assets/images/balaji_namkeen_logo.png" class="object-cover w-67">
+                      <h3 class="font-semibold">Balaji Wafers</h3>
+                      <p class="text-sm opacity-80 shrink ">Katoria Constantly Trying To Improve Performance.</p>
+                    </div>
                   </div>
 
-
-                  <!-- slide 1 -->
-                  <div class="slide">
-
-                    <div class="brand-box-red">
-
-                      <img src="../assets/images/balaji_namkeen_logo.png" alt="Brand Logo 1">
-                      <div class="gap-11">
-                        <h4 class="font-heading  text-20 font-semibold">Balaji Wafers</h4>
-                        <p class="font-heading  text-14 font-normal">Kataria constantly trying to find ways to improve
-                          performance
-                        </p>
-                      </div>
-
+                  <!-- CARD 2 -->
+                  <div class="flex flex-wrap flex-col shrink max-w-290">
+                    <div
+                      class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 sm:w-290 sm:h-190 shrink">
+                      <img src="/assets/images/balaji_wefers_logo.png" class="object-cover w-67">
+                      <h3 class="font-semibold">Balaji Wafers & Namkeen</h3>
+                      <p class="text-sm opacity-80 shrink ">Considering The Level Of Effort.</p>
                     </div>
-
-                    <div class="brand-box-yellow">
-
-                      <img src="../assets/images/balaji_namkeen_logo.png" alt="Brand Logo 1">
-                      <div class="gap-11">
-                        <h4 class="font-heading text-20 font-semibold">Balaji Wafers</h4>
-                        <p class="font-heading text-14 font-normal">Kataria constantly trying to find ways to improve
-                          performance
-                        </p>
-                      </div>
-
-                    </div>
-                     <div class="brand-box-yellow">
-
-                      <img src="../assets/images/balaji_namkeen_logo.png" alt="Brand Logo 1">
-                      <div class="gap-11">
-                        <h4 class="font-heading text-20 font-semibold">Balaji Wafers</h4>
-                        <p class="font-heading text-14 font-normal">Kataria constantly trying to find ways to improve
-                          performance
-                        </p>
-                      </div>
-
-                    </div>
-
-                       <div class="brand-box-red">
-
-                      <img src="../assets/images/balaji_namkeen_logo.png" alt="Brand Logo 1">
-                      <div class="gap-11">
-                        <h4 class="font-heading  text-20 font-semibold">Balaji Wafers</h4>
-                        <p class="font-heading  text-14 font-normal">Kataria constantly trying to find ways to improve
-                          performance
-                        </p>
-                      </div>
-
-                    </div>
-
                   </div>
 
+                  <!-- CARD 3 -->
+                  <div class="flex flex-wrap flex-col shrink max-w-290">
+                    <div
+                      class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 sm:w-290 sm:h-190 shrink">
+                      <img src="/assets/images/vadilal_ice_cream_logo.png" class="object-cover w-67">
+                      <h3 class="font-semibold">Vadilal Ice Cream</h3>
+                      <p class="text-sm opacity-80">Ways To Improve Performance.</p>
+                    </div>
+                  </div>
+
+                  <!-- CARD 4 -->
+                  <div class="flex flex-wrap flex-col shrink max-w-290">
+                    <div
+                      class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11 sm:w-290 sm:h-190 shrink">
+                      <img src="/assets/images/cocacola_brand_logo.png" class="object-cover w-100">
+                      <h3 class="font-semibold">Coca Cola</h3>
+                      <p class="text-sm opacity-80">Achieve Greater Performance.</p>
+                    </div>
+                  </div>
                 </div>
-
               </div>
-            </div>
 
-            <div class="quote-line">
-              <p> Let’s drive success through logistics. </p><a href="./contact.html">Get
-                Free Quote</a>
-            </div>
+              <!-- SLIDE 2 -->
+              <div class="swiper-slide">
 
+                <div class="flex flex-row gap-30 flex-wrap">
+                  <!-- CARD 1 -->
+                  <div
+                    class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/balaji_namkeen_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Balaji Wafers</h3>
+                    <p class="text-sm opacity-80">Katoria Constantly Trying To Improve Performance.</p>
+                  </div>
+
+                  <!-- CARD 2 -->
+                  <div
+                    class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/balaji_wefers_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Balaji Wafers & Namkeen</h3>
+                    <p class="text-sm opacity-80">Considering The Level Of Effort.</p>
+                  </div>
+
+                  <!-- CARD 3 -->
+                  <div
+                    class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/vadilal_ice_cream_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Vadilal Ice Cream</h3>
+                    <p class="text-sm opacity-80">Ways To Improve Performance.</p>
+                  </div>
+
+                  <!-- CARD 4 -->
+                  <div
+                    class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/cocacola_brand_logo.png" class="object-cover w-100">
+                    <h3 class="font-semibold">Coca Cola</h3>
+                    <p class="text-sm opacity-80">Achieve Greater Performance.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 3 -->
+              <div class="swiper-slide">
+
+                <div class="flex flex-row gap-30 flex-wrap">
+                  <!-- CARD 1 -->
+                  <div
+                    class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/balaji_namkeen_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Balaji Wafers</h3>
+                    <p class="text-sm opacity-80">Katoria Constantly Trying To Improve Performance.</p>
+                  </div>
+
+                  <!-- CARD 2 -->
+                  <div
+                    class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/balaji_wefers_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Balaji Wafers & Namkeen</h3>
+                    <p class="text-sm opacity-80">Considering The Level Of Effort.</p>
+                  </div>
+
+                  <!-- CARD 3 -->
+                  <div
+                    class="brand-card rounded-30 px-20  bg-yellow-300 py-20 border-2 text-black border-black flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/vadilal_ice_cream_logo.png" class="object-cover w-67">
+                    <h3 class="font-semibold">Vadilal Ice Cream</h3>
+                    <p class="text-sm opacity-80">Ways To Improve Performance.</p>
+                  </div>
+
+                  <!-- CARD 4 -->
+                  <div
+                    class="brand-card rounded-30 px-20 py-20 border-2 text-white border-white flex flex-col gap-11 w-290 h-190">
+                    <img src="/assets/images/cocacola_brand_logo.png" class="object-cover w-100">
+                    <h3 class="font-semibold">Coca Cola</h3>
+                    <p class="text-sm opacity-80">Achieve Greater Performance.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom link -->
+          <div class="flex gap-2 mt-20 md:mt-30 xl:mt-48 justify-baseline items-start">
+            <p class="text-white">Let’s Drive Success Through Logistics.</p>
+            <a class="font-semibold underline text-white hover:text-black" href="#">Get Free Quote</a>
           </div>
 
         </div>
 
-
-        <div class="right-wrapper">
-
-          <div class="inner-wrapper">
-            <img class="" src="../assets/images/rectangle_placeholder.png" alt="Brand Partners">
-            <span class="absolute top-1/2 left-1/2 right-1/2 bottom-1/2">Brand-partners</span>
-          </div>
+        <!-- RIGHT IMAGE -->
+        <div class="w-full lg:w-1/2 relative">
+          <img src="/assets/images/rectangle_placeholder.png" class="w-full h-full object-cover">
+          <p class="absolute inset-0 flex justify-center items-center text-black text-xl font-semibold">
+            Brand-partners
+          </p>
         </div>
 
       </div>
-
     </section>
+
+
+
 
 
 
