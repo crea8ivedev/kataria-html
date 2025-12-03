@@ -293,48 +293,6 @@ const initSliders = () => {
     updateArrows();
   })();
 
-  // const brandEl = document.querySelector(".brandSwiper");
-  // if (brandEl) {
-
-  //   // auto red/yellow pattern
-  //   (function applyPattern() {
-  //     const cards = Array.from(document.querySelectorAll(".brand-card"));
-  //     cards.forEach((c, i) => {
-  //       c.classList.remove("brand-card--red", "brand-card--yellow");
-  //       const mod = i % 4;
-  //       if (mod === 1 || mod === 2) {
-  //         c.classList.add("brand-card--yellow");
-  //       } else {
-  //         c.classList.add("brand-card--red");
-  //       }
-  //     });
-  //   })();
-
-  //   // Swiper initialization
-  //   const brandSwiper = new Swiper(".brandSwiper", {
-  //     loop: true,
-  //     slidesPerView: 1,
-  //     spaceBetween: 30,
-  //     observeParents: true,
-  //     observer: true,
-
-  //     pagination: {
-  //       el: ".brandSwiper .swiper-pagination",
-  //       clickable: true,
-  //     },
-
-  //     navigation: {
-  //       nextEl: ".brand-next",
-  //       prevEl: ".brand-prev",
-  //     },
-
-  //     breakpoints: {
-  //       768: { slidesPerView: 1 },
-  //       1024: { slidesPerView: 1 },
-  //     },
-  //   });
-  // }
-
 
 
   // color pattern 1-red, 2-yellow, 3-yellow, 4-red
