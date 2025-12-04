@@ -333,10 +333,41 @@
 /* ===========================
       HISORY
 ============================ */
+.history-main{
+  @apply bg-[#D64545] text-white py-16 md:py-20 h-1070 max-w-1920 m-auto h-full
+}
+
 .story-wrapper .swiper-button-next::after, 
 .story-wrapper  .swiper-button-prev::after {
   @apply hidden
 }
 .story-wrapper .swiper-button-next , .story-wrapper  .swiper-button-prev{
   @apply relative inset-0
+}
+
+.history-wrape{
+  @apply max-w-1593 mx-auto px-4 md:px-8  py-100
+}
+
+.history-top-content{
+  @apply flex flex-col md:flex-row md:items-start md:justify-between mb-10 space-y-4 md:space-y-0
+
+}
+
+.history-sub-title{
+  @apply  flex items-center gap-6 mb-[13px]
+}
+
+.history-sub-title span{
+  @apply uppercase text-14
+}
+
+.history-top-content h2{
+  @apply text-44 md:text-44 font-extrabold mt-12
+}
+
+
+@media (max-width:1500px){
+
+
 }
