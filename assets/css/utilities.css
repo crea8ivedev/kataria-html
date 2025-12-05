@@ -366,6 +366,66 @@
   @apply text-44 md:text-44 font-extrabold mt-12
 }
 
+.navigation-history-main-btn{
+  @apply flex items-center gap-10 pr-118 pt-50
+}
+
+.navigation-history-main-btn-prev{
+  @apply !w-40 !h-40 !rounded-full  bg-white  flex items-center justify-center
+}
+
+.navigation-history-main-btn-prev img{
+  @apply w-16 h-14
+}
+
+.navigation-history-main-btn-next{
+  @apply !w-40 !h-40 !rounded-full bg-white flex items-center justify-center
+}
+
+.navigation-history-main-btn-next img{
+  @apply w-16 h-14
+}
+
+.history-slide-main{
+    @apply relative !pt-60
+}
+
+.history-slide-img{
+  @apply rounded-xl overflow-hidden h-[722px] w-1230 flex items-center justify-center
+}
+
+.history-slide-img img{
+  @apply w-full h-full object-cover
+}
+
+.history-content-main{
+  @apply hidden lg:block absolute  top-100 right-0
+}
+
+.history-content-wrape{
+  @apply bg-white text-black  max-w-[669px] p-50 rounded-xl p-6 shadow-xl
+}
+
+.history-content-subtitle-main{
+  @apply flex items-center gap-8
+}
+
+.history-round-samll{
+  @apply w-13 h-13 bg-[#FF4D00] rounded-full
+}
+
+.history-content-year{
+  @apply text-[#FF4D00] font-semibold text-24
+}
+
+.history-content-main h3{
+  @apply text-xl font-bold mt-4
+}
+
+.history-content-main p{
+  @apply mt-15 text-[20px] leading-40 text-black
+}
+
 
 @media (max-width:1500px){
 
